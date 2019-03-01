@@ -1,0 +1,24 @@
+/*
+ * electricValve.h
+ *
+ *  Created on: 2019/02/28
+ *      Author: User
+ */
+
+#ifndef MYHEADERS_ELECTRICVALVE_H_
+#define MYHEADERS_ELECTRICVALVE_H_
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_conf.h"
+
+class electricValve
+{
+public:
+	electricValve();
+	~electricValve();
+private:
+	void GPIO_PinsInit();
+
+};
+
+#endif /* MYHEADERS_ELECTRICVALVE_H_ */

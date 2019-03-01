@@ -1,0 +1,51 @@
+/*
+ * electricValve.h
+ *
+ *  Created on: 2019/02/28
+ *      Author: User
+ */
+
+#ifndef MYHEADERS_ELECTRICVALVE_H_
+#define MYHEADERS_ELECTRICVALVE_H_
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_conf.h"
+
+#include <type_traits>
+
+class electricValve
+{
+public:
+	electricValve();
+
+	enum class name : uint16_t
+	{
+		EV0	= 0x0100,
+		EV1	= 0x0200,
+		EV2	= 0x0400,
+		EV3	= 0x0800,
+		EV4	= 0x1000,
+		EV5	= 0x2000,
+		EV6	= 0x4000,
+		EV7	= 0x8000
+	};
+	enum class state { Set, Reset };
+
+	template<class T>
+	void setNewState(state newState, T valveName)
+	{
+		static_assert(std::is,"");
+	}
+	template<class...  valves>
+	void setNewState(state newState, valves&... setEvNumber)
+	{
+		setNewState(newState, setEvNumber...);
+	}
+
+	~electricValve();
+private:
+	void GPIO_PinsInit();
+
+};
+
+#endif /* MYHEADERS_ELECTRICVALVE_H_ */
