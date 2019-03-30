@@ -1,0 +1,65 @@
+/*
+ * rotary_encoder.h
+ *
+ *  Created on: 2019/03/01
+ *      Author: User
+ */
+
+#ifndef MYHEADERS_ROTARY_ENCODER_H_
+#define MYHEADERS_ROTARY_ENCODER_H_
+
+#include <type_traits>
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_conf.h"
+
+class rotaryEncoder
+{
+public : enum class encoderName : uint8_t {RotEnc1, RotEnc2};
+private:
+	const encoderName useRotEncName_;
+	TIM_TypeDef* useTimer_;
+
+public:
+	rotaryEncoder() = delete;
+
+	rotaryEncoder(const encoderName useRotEnc)
+		: useRotEncName_(useRotEnc), useTimer_(useRotEnc == encoderName::RotEnc1 ? TIM3 : TIM2)
+	{
+		timerClockInit_();
+	}
+	rotaryEncoder(const encoderName useRotEnc, const uint32_t setPeriod)
+		: useRotEncName_(useRotEnc), useTimer_(useRotEnc == encoderName::RotEnc1 ? TIM3 : TIM2)
+	{
+		timerClockInit_();
+		configEncoderInterfaceMode(setPeriod);
+	}
+
+	template<typename T>
+	inline std::enable_if<std::is_unsigned<T>::value, T> readCount() const
+	{
+		return (T)useTimer_-> CNT;
+	}
+
+	template < >
+	int readCount<int>(int a){}
+
+	virtual ~rotaryEncoder();
+
+protected:
+	inline void timerClockInit_()
+	{
+		const uint32_t RCC_Periph = (useRotEncName_ == encoderName::RotEnc1 ? RCC_APB1Periph_TIM3 : RCC_APB1Periph_TIM2);
+		RCC_APB1PeriphClockCmd(RCC_Periph, ENABLE);
+	}
+	void configEncoderInterfaceMode();
+	inline void configEncoderInterfaceMode(const uint32_t setPeriod)
+	{
+		configEncoderInterfaceMode();
+		TIM_SetAutoreload(useTimer_, setPeriod);
+	}
+};
+
+
+
+#endif /* MYHEADERS_ROTARY_ENCODER_H_ */

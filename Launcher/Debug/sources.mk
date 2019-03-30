@@ -27,5 +27,6 @@ CPP_DEPS :=
 SUBDIRS := \
 StdPeriph_Driver/src \
 src \
+src/mySources \
 startup \
 

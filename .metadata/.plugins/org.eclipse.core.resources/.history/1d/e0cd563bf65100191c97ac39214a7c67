@@ -1,0 +1,14 @@
+/*
+ * uart.cpp
+ *
+ *  Created on: 2019/03/29
+ *      Author: User
+ */
+#include "uart.hpp"
+
+void Lazurite::TransmitData(uint8_t SendByte)
+{
+	while(!USART_GetFlagStatus(USART2, USART_FLAG_TXE));
+	USART_SendData(USART2, (uint16_t)SendByte);
+}
+
