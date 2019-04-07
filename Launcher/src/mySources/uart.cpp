@@ -6,6 +6,8 @@
  */
 #include "uart.hpp"
 
+std::function<void(const std::string&)> uartSendString = [](const std::string&){};
+
 void UART::pinsInit_usart1()
 {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);

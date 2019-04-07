@@ -1,0 +1,40 @@
+/*
+ * position_pid.hpp
+ *
+ *  Created on: 2019/04/06
+ *      Author: User
+ */
+
+#ifndef MYHEADERS_POSITION_PID_HPP_
+#define MYHEADERS_POSITION_PID_HPP_
+
+#include <motor_driver.hpp>
+#include <rotary_encoder.hpp>
+
+typedef struct
+{
+	const double P;
+	const double I;
+	const double D;
+}PIDgain_positon;
+
+class PositionPID : protected RotaryEncoder, public MotorDriver
+{
+public:
+	PositionPID() = delete;
+	PositionPID(const encoderName useRotEnc, const uint8_t useDriverAdd, const PIDgain_positon& usegain) :
+		RotaryEncoder(useRotEnc),
+		MotorDriver(useDriverAdd),
+		PIDgain(usegain)
+	{
+
+	}
+
+protected:
+	PIDgain_positon PIDgain_;
+
+};
+
+
+
+#endif /* MYHEADERS_POSITION_PID_HPP_ */

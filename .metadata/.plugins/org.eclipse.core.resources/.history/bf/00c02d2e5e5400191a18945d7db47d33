@@ -1,0 +1,39 @@
+/*
+ * systick.hpp
+ *
+ *  Created on: 2019/03/31
+ *      Author: User
+ */
+
+#ifndef MYHEADERS_SYSTICK_HPP_
+#define MYHEADERS_SYSTICK_HPP_
+
+#include <functional>
+#include <vector>
+
+namespace systick
+{
+static std::vector<std::function<void(void)>> sysTick_callsFunctions;
+
+void init(const uint32_t SysTickFrequency = 1000, const uint32_t IRQ_priority = 0)
+{
+	RCC_ClocksTypeDef RCC_Clocks;
+	RCC_GetClocksFreq(&RCC_Clocks);
+	SysTick_Config(RCC_Clocks.HCLK_Frequency / SysTickFrequency);
+	NVIC_SetPriority(SysTick_IRQn, 3);
+}
+
+void additionCallFunction(const std::function<void(void)>&& addFunc){ sysTick_callsFunctions.push_back(addFunc); }
+
+extern "C"
+{
+void SysTick_Handler()
+{
+	for(auto i : sysTick_callsFunctions)i();
+}
+}
+
+}
+
+
+#endif /* MYHEADERS_SYSTICK_HPP_ */

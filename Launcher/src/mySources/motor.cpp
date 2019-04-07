@@ -1,12 +1,20 @@
 #include "motor.hpp"
 
-motorControl::motorControl(const uint16_t resolution, const uint32_t frequency)
+MotorControl::MotorControl()
+{
+	GPIO_PinsInit_();
+	timerInit_();
+	gateEnablePinInit_();
+}
+
+MotorControl::MotorControl(const uint16_t resolution, const uint32_t frequency)
 {
 	GPIO_PinsInit_();
 	timerInit_(resolution, frequency);
+	gateEnablePinInit_();
 }
 
-void motorControl::setSpeed(const int32_t setValue)
+void MotorControl::setSpeed(const int32_t setValue)
 {
 	if(std::abs(setValue) > nowResolution_)return;
 	if(nowDriveMode_ == driveMode::SMB)
@@ -26,31 +34,34 @@ void motorControl::setSpeed(const int32_t setValue)
 	}
 	else
 	{
-		const uint32_t setValue_LAP = (uint32_t)std::round(((double)setValue + (double)nowResolution_) / 2.0);
+		const uint32_t setValue_LAP = (uint32_t)std::round(((float)setValue + (float)nowResolution_) / 2.0f);
 
 		TIM_SetCompare1(TIM1, setValue_LAP);
 		TIM_SetCompare2(TIM1, setValue_LAP);
 	}
+	const std::string sendString =
+				"Duty : " + std::to_string(setValue) + '\n';
+	uartSendString(sendString);
 }
 
-void motorControl::setSpeed(const int32_t setValue, const driveMode setMode)
+void MotorControl::setSpeed(const int32_t setValue, const driveMode setMode)
 {
 	setDriveMode(setMode);
 	setSpeed(setValue);
 }
 
-motorControl::~motorControl()
+MotorControl::~MotorControl()
 {
 
 }
 
-constexpr uint16_t motorControl::prescaler_
+constexpr uint16_t MotorControl::prescaler_
 	(const uint16_t resolution, const uint32_t pwmFreq, const uint32_t timerFrequency)
 {
 	return (uint16_t)(timerFrequency / ((uint32_t)pwmFreq * (uint32_t)resolution));
 }
 
-void motorControl::GPIO_PinsInit_()
+void MotorControl::GPIO_PinsInit_()
 {
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
@@ -74,7 +85,8 @@ void motorControl::GPIO_PinsInit_()
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource0, GPIO_AF_TIM1);
 }
 
-void motorControl::timerInit_(const uint16_t resolution, const uint32_t pwmFreq)
+void MotorControl::timerInit_
+	(const uint16_t resolution, const uint32_t pwmFreq)
 {
 	nowResolution_ = resolution;
 
@@ -117,4 +129,15 @@ void motorControl::timerInit_(const uint16_t resolution, const uint32_t pwmFreq)
 	TIM_BDTRInitStructure.TIM_AutomaticOutput	= TIM_AutomaticOutput_Enable;
 
 	TIM_BDTRConfig(TIM1 , &TIM_BDTRInitStructure);
+}
+void MotorControl::gateEnablePinInit_()
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_StructInit(&GPIO_InitStruct);
+	GPIO_InitStruct.GPIO_Pin	= GPIO_Pin_5;
+	GPIO_InitStruct.GPIO_Mode	= GPIO_Mode_OUT;
+	GPIO_InitStruct.GPIO_PuPd	= GPIO_PuPd_NOPULL;
+	GPIO_InitStruct.GPIO_OType	= GPIO_OType_PP;
+	GPIO_InitStruct.GPIO_Speed	= GPIO_Speed_100MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStruct);
 }

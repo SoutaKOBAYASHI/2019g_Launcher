@@ -1,0 +1,58 @@
+#include "motor_driver.hpp"
+
+motorDriver::motorDriver(uint8_t DriverAddress, const SendParamsType& SetDriverParams)
+{
+	this->UsingMotorDriverAddress = DriverAddress;
+	this->SendParams = SetDriverParams;
+}
+motorDriver::motorDriver(uint8_t DriverAddress)
+{
+	this->UsingMotorDriverAddress = DriverAddress;
+}
+
+void motorDriver::SetSpeed(int32_t Speed)
+{
+	std::array<uint8_t, MotorDriverDataArraySize> SendData = {};
+	SendData[0] = this->NowMode;
+	for(std::size_t i = 1 ; i < MotorDriverDataArraySize ; i++)
+		SendData[i] = (uint8_t)(Speed >> 8 * (MotorDriverDataArraySize - (i+1)));
+
+	ControlAreaNetwork::SendData(SendData, this->UsingMotorDriverAddress);
+}
+
+void motorDriver::ParamSendTable()
+{
+	constexpr uint16_t SendInterval_ms_ = 100;
+	static uint16_t count = 0;
+
+	if(!ParamsSendFlag)return;
+
+	switch(count)
+	{
+	case (ParamSendMode::PIDgain_P-ParamSendMode::PIDgain_P)*SendInterval_ms_:
+		MD_ParamSend<ParamSendMode::PIDgain_P>(SendParams.PIDgain_P);
+		break;
+
+	case (ParamSendMode::PIDgain_I-ParamSendMode::PIDgain_P)*SendInterval_ms_:
+			MD_ParamSend<ParamSendMode::PIDgain_P>(SendParams.PIDgain_P);
+		break;
+
+	case (ParamSendMode::PIDgain_D-ParamSendMode::PIDgain_P)*SendInterval_ms_:
+			MD_ParamSend<ParamSendMode::PIDgain_P>(SendParams.PIDgain_P);
+		break;
+
+	case (ParamSendMode::SpeedMAX-ParamSendMode::PIDgain_P)*SendInterval_ms_:
+			MD_ParamSend<ParamSendMode::SpeedMAX>(SendParams.SpeedMAX);
+		break;
+
+	case (ParamSendMode::PPR-ParamSendMode::PIDgain_P)*SendInterval_ms_:
+			MD_ParamSend<ParamSendMode::PPR>(SendParams.PPR);
+		ParamsSendFlag = false;
+		count = 0;
+		break;
+
+	default:
+		count++;
+		break;
+	}
+}

@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="0" key="org.eclipse.cdt.uiformatter_pagemodify_dialog.preferred_x"/>
+	<item value="0" key="org.eclipse.cdt.uiformatter_pagemodify_dialog.last_focus"/>
+	<item value="0" key="org.eclipse.cdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="0" key="org.eclipse.cdt.uiformatter_page.white_space_tab_page.node"/>
 	<item value="デフォルト C++ ソース・テンプレート" key="LastUsedSourceTemplate"/>
+	<item value="981" key="org.eclipse.cdt.uiformatter_pagemodify_dialog.preferred_width"/>
+	<item value="876" key="org.eclipse.cdt.uiformatter_pagemodify_dialog.preferred_height"/>
 	<item value="デフォルト C++ ヘッダー・テンプレート" key="LastUsedHeaderTemplate"/>
+	<item value="0" key="org.eclipse.cdt.uiformatter_page.white_space.c_view.inner"/>
+	<item value="0" key="formatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="1" key="org.eclipse.cdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="398" key="DIALOG_WIDTH"/>
+		<item value="1|Yu Gothic UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Yu Gothic UI" key="DIALOG_FONT_NAME"/>
+		<item value="438" key="DIALOG_HEIGHT"/>
+		<item value="769" key="DIALOG_X_ORIGIN"/>
+		<item value="236" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="true" key="stubSelected1"/>
+		<item value="true" key="stubVirtual1"/>
+		<item value="false" key="namespaceSelected"/>
+		<item value="false" key="stubInline0"/>
+		<item value="false" key="stubInline1"/>
+		<item value="" key="namespace"/>
+		<item value="false" key="testFileSelected"/>
+		<item value="true" key="stubSelected0"/>
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
@@ -12,5 +38,24 @@
 	<section name="CRenameRefactoringInputPage">
 	</section>
 	<section name="completion_proposal_size">
+		<item value="251" key="size.y"/>
+		<item value="353" key="size.x"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">
+		<item value="false" key="show_enums"/>
+		<item value="false" key="show_unions"/>
+		<item value="false" key="show_macros"/>
+		<item value="true" key="show_classes"/>
+		<item value="false" key="show_functions"/>
+		<item value="true" key="show_lowlevel"/>
+		<item value="false" key="show_namespaces"/>
+		<item value="false" key="show_enumerators"/>
+		<item value="true" key="show_structs"/>
+		<item value="774" key="x"/>
+		<item value="373" key="width"/>
+		<item value="0" key="y"/>
+		<item value="false" key="show_typedefs"/>
+		<item value="false" key="show_variables"/>
+		<item value="671" key="height"/>
 	</section>
 </section>

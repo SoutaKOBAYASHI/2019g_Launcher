@@ -1,0 +1,45 @@
+/*
+ * position_pid.cpp
+ *
+ *  Created on: 2019/04/06
+ *      Author: User
+ */
+
+#include <position_pid.hpp>
+
+void PositionPID::positionPID_update()
+{
+	nowCount_ += RotaryEncoder::readCount<uint32_t>();
+	RotaryEncoder::clearCount();
+
+	static double dev_before = 0.0;
+
+	enum class termName {P, I, D};
+	static std::map<termName, double> terms = {{termName::P, 0.0},{termName::I, 0.0},{termName::D, 0.0}};
+
+	const double dev_now = targetPosition_ - nowCount_;
+
+
+	/*Calculation terms of PID.*/
+	terms[termName::P] =  constantValues.PIDgain_.P * dev_now;
+	terms[termName::I] += constantValues.PIDgain_.I * dev_now;
+	terms[termName::D] =  constantValues.PIDgain_.D * (dev_now - dev_before);
+
+	/*addition terms of PID.*/
+	double setSpeed = 0.0;
+	for(auto i : terms)setSpeed += i.second;
+
+	if(isPositionPID_Enable)
+	{
+		MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+		dev_before = dev_now;
+	}
+	else
+	{
+		dev_before = 0.0;
+		terms[termName::I] = 0.0;
+	}
+}
+
+
+

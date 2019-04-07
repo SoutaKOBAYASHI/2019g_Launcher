@@ -31,7 +31,8 @@ src/mySources/motor.o: ../src/mySources/motor.cpp \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_rng.h \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_can.h \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h \
- D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h
+ D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:
 
@@ -98,3 +99,5 @@ D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_can.h:
 D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h:
 
 D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:

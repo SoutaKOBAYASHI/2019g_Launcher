@@ -1,0 +1,243 @@
+
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+#define _DEFAULT_SOURCE
+#define _USE_MATH_DEFINES
+#include <cmath>
+#include <string>
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_conf.h"
+
+#include <motor.hpp>
+#include <electric_valve.hpp>
+#include <led.hpp>
+#include <rotary_encoder.hpp>
+#include <uart.hpp>
+#include <speed_pid.hpp>
+#include <functional>
+#include <vector>
+#include <interrupt.hpp>
+#include <board_io.hpp>
+#include <motor_driver.hpp>
+#include <can.hpp>
+#include <position_pid.hpp>
+
+constexpr int gcc_version = __GNUC__ ;
+constexpr int gcc_minorVersion = __GNUC_MINOR__;
+
+void clockInit();
+
+LED led;
+
+
+
+
+
+class Launcher : private Speed_pid
+{
+public:
+	Launcher() : Speed_pid(encoderName::RotEnc1, motorPPR_, useGain_, 0.001)
+	{
+		Speed_pid::setNewStateGate(MotorControl::gateEnableState::Enable);
+		Speed_pid::setCount((uint32_t)defaultEncoderCount);
+
+		EXTI0Intrrupt::init(0);
+
+		EXTI0Intrrupt::additionCallFunction( [&]{ limitSensorIntrrupt(); } );
+
+		Speed_pid::setEnableState(true);
+	}
+	virtual void update() override
+	{
+		launcherUpdate();
+		Speed_pid::update();
+	}
+	const bool& isGotZeroPoint = isGotZeroPoint_;
+
+	virtual ~Launcher(){ }
+private:
+	enum class sequence : uint8_t
+	{
+		launch,
+		breaking,
+		returnZeroPoint
+	};
+	void throwingShagai();
+
+	static constexpr PIDgain_speed useGain_ = {-0.0001, -0.0001, -0.0};
+	static constexpr uint16_t motorPPR_ = 2048 * 4;
+
+	static constexpr uint32_t defaultEncoderCount = 55000;
+	static constexpr uint32_t encCount_stopPoint = 23000;
+
+	/*members to get zero point*/
+	static constexpr double getZeroPoint_motorDriveSpeed_ = -1000;
+	static constexpr double throwing_motorDriveSpeed_ = -55000;
+	bool isGotZeroPoint_ = false;
+
+	IO_sigPins<ioName::sig0, ioState::input> zeroPointLimit;
+	void getZeroPoint();
+	void limitSensorIntrrupt();
+	void launcherUpdate();
+};
+
+int main(void)
+{
+	clockInit();
+	systick::init();
+	ControlAreaNetwork::Config(0x01);
+
+	IO_sigPins<ioName::sig1, ioState::input> input1;
+
+	UART uart1(UART::name::uart1);
+	uartSendString = [&](const std::string& sendString){ uart1.TransmitData(sendString); };
+
+	constexpr PositionPID_initStructType initStruct
+	{
+		{ 0.0, 0.0, 0.0 },
+		encoderName::RotEnc2,
+		8192,
+		0x10,
+		100,
+		10
+	};
+	Launcher launcher;
+
+	while(true);
+	return 0;
+}
+
+void clockInit()
+{
+	/*
+	 * PLLM = 16, PLLN = 168, PLLP = 2, PLLQ = 8
+	 * HSI clock is 16MHz. This is constant value.
+	 * Expression of System clock is	: HSI x PLLN / (PLLM x PLLP) = 84MHz
+	 * Expression of HCLK clock is		: SystemClock / HCLK_prescaler = 84MHz
+	 * Expression of PCLK1 clock is		: HCLK / PCLK1_prescaler = 42MHz
+	 * Expression of PCLK2 clock is		: HCLK / PCLK2_prescaler = 84MHz
+	 */
+	RCC_DeInit();
+
+	FLASH_SetLatency(FLASH_Latency_2);
+
+	RCC_HCLKConfig(RCC_SYSCLK_Div1);					// HCLK prescaler is 1.
+
+	RCC_PCLK1Config(RCC_HCLK_Div2);						// PCLK1 prescaler is 2.
+	RCC_PCLK2Config(RCC_HCLK_Div1);						// PCLK2 prescaler is 1.
+
+	RCC_PLLCmd(DISABLE);
+	RCC_PLLConfig(RCC_PLLSource_HSI, 16, 168, 2, 8);
+	RCC_PLLCmd(ENABLE);
+	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
+
+	RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
+
+	while(RCC_GetSYSCLKSource() != 0x08);
+}
+
+
+void Launcher::throwingShagai()
+{
+	static std::string sendString = std::to_string(Speed_pid::nowSpeed) + '\n';
+	uartSendString(sendString);
+	sendString.clear();
+
+	static sequence nowSequence = sequence::returnZeroPoint;
+
+	switch(nowSequence)
+	{
+	case sequence::launch:
+		if(Speed_pid::readPositionCount<uint32_t>() < encCount_stopPoint)
+		{
+			Speed_pid::setEnableState(false);
+			nowSequence = sequence::breaking;
+		}
+		else
+		{
+			Speed_pid::setEnableState(true);
+			Speed_pid::setTargetSpeed(throwing_motorDriveSpeed_);
+		}
+		break;
+
+	case sequence::breaking:
+		if(Speed_pid::nowSpeed > 1.0)nowSequence = sequence::returnZeroPoint;
+		else Speed_pid::MotorControl::setSpeed(-30);
+		break;
+
+	case sequence::returnZeroPoint:
+		if(zeroPointLimit.readNowState())
+		{
+			Speed_pid::setEnableState(false);
+			Speed_pid::setSpeed(0, MotorControl::driveMode::SMB);
+		}
+		else
+		{
+			Speed_pid::setEnableState(true);
+			Speed_pid::setTargetSpeed(-1.0*getZeroPoint_motorDriveSpeed_);
+		}
+		break;
+	}
+}
+
+void Launcher::launcherUpdate()
+{
+	getZeroPoint();
+	if(isGotZeroPoint)
+	{
+		throwingShagai();
+	}
+
+	std::string a = std::to_string(Speed_pid::readPositionCount<uint16_t>()) + '\n';
+	uartSendString(a);
+}
+
+void Launcher::getZeroPoint()
+{
+	if(!isGotZeroPoint)
+	{
+		Speed_pid::setEnableState(true);
+		if(zeroPointLimit.readNowState())
+		{
+			Speed_pid::setTargetSpeed(getZeroPoint_motorDriveSpeed_);
+		}
+		else
+		{
+			Speed_pid::setTargetSpeed(-1.0*getZeroPoint_motorDriveSpeed_);
+		}
+
+
+	}
+	if(zeroPointLimit.readNowState())
+	{
+		led.setNewState(LED::ledColor::Red, LED::state::ON);
+	}
+	else
+	{
+		led.setNewState(LED::ledColor::Red, LED::state::OFF);
+	}
+}
+
+void Launcher::limitSensorIntrrupt()
+{
+	led.setNewState(LED::ledColor::Yellow, LED::state::OFF);
+	if(!isGotZeroPoint)
+	{
+		isGotZeroPoint_ = true;
+		Speed_pid::setPositionCount(defaultEncoderCount);
+		Speed_pid::setTargetSpeed(0.0);
+		Speed_pid::setEnableState(false);
+		Speed_pid::MotorControl::setSpeed(0);
+	}
+}
+
+

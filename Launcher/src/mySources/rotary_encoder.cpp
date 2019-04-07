@@ -1,6 +1,6 @@
 #include <rotary_encoder.hpp>
 
-void rotaryEncoder::configEncoderInterfaceMode_()
+void RotaryEncoder::configEncoderInterfaceMode_()
 {
 	TIM_EncoderInterfaceConfig(useTimer_, TIM_EncoderMode_TI12 , TIM_ICPolarity_Rising , TIM_ICPolarity_Rising);
 	TIM_Cmd(useTimer_ , ENABLE);
@@ -10,7 +10,7 @@ void rotaryEncoder::configEncoderInterfaceMode_()
 	TIM_SetCounter(useTimer_, 0);
 }
 
-void rotaryEncoder::configEncoderPins_timer2_()
+void RotaryEncoder::configEncoderPins_timer2_()
 {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
@@ -25,7 +25,7 @@ void rotaryEncoder::configEncoderPins_timer2_()
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource1, GPIO_AF_TIM2);
 }
 
-void rotaryEncoder::configEncoderPins_timer3_()
+void RotaryEncoder::configEncoderPins_timer3_()
 {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 

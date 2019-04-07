@@ -1,0 +1,170 @@
+#ifndef __LIBRARIES_MOTOR_DRIVER_H__
+#define __LIBRARIES_MOTOR_DRIVER_H__
+
+#include <array>
+
+#ifdef STM32F0
+#include "stm32f0xx.h"
+#ifdef USE_STDPERIPH_DRIVER
+#include "stm32f0xx_conf.h"
+#endif
+#endif
+
+#include "can.hpp"
+
+#ifdef STM32F3
+#include "stm32f30x.h"
+#ifdef USE_STDPERIPH_DRIVER
+#include "stm32f30x_conf.h"
+#endif
+#endif
+
+#ifdef STM32F4
+#include "stm32f4xx.h"
+#ifdef USE_STDPERIPH_DRIVER
+#include "stm32f4xx_conf.h"
+#endif
+#endif
+
+class motorDriver
+{
+public:
+	struct SendParamsType
+	{
+		float PIDgain_P		= 0.0;
+		float PIDgain_I		= 0.0;
+		float PIDgain_D		= 0.0;
+		uint32_t SpeedMAX	= UINT32_MAX;
+		uint32_t PPR		= 0;
+	};
+
+	//Motor() = delete;
+	motorDriver(uint8_t DriverAddress, const SendParamsType& SetDriverParams);
+	motorDriver(uint8_t DriverAddress);
+
+	enum MotorDriveMode : uint8_t
+	{
+		Stop		= 0x80,
+		DutyControl	= 0x00,
+		PID			= 0x01
+	};
+	inline void SetMotorDriveMode(MotorDriveMode SetMode)
+	{
+		this->NowMode = SetMode;
+	}
+	void SetSpeed(int32_t Speed);
+	inline void SetSpeed(int32_t Speed, MotorDriveMode DriveMode)
+	{
+		SetMotorDriveMode(DriveMode);
+		SetSpeed(Speed);
+	}
+
+	inline void Update()
+	{
+		ParamSendTable();
+	}
+
+	enum ParamSendMode : uint8_t
+	{
+		PIDgain_P	= 0x02,
+		PIDgain_I	= 0x03,
+		PIDgain_D	= 0x04,
+		SpeedMAX	= 0x05,
+		PPR			= 0x06
+	};
+
+	template<class T>
+	int8_t MD_ParamSend(T SendParam, ParamSendMode SendMode)
+	{
+		uint32_t SendParam_Converted = BitsConvertion<uint32_t>(SendParam);
+		std::array<uint8_t, MotorDriverDataArraySize> SendData = {};
+
+		switch(SendMode)
+		{
+		case PIDgain_P:
+			SendParams.PIDgain_P = SendParam;
+			break;
+
+		case PIDgain_I:
+			SendParams.PIDgain_I = SendParam;
+			break;
+
+		case PIDgain_D:
+			SendParams.PIDgain_D = SendParam;
+			break;
+
+		case SpeedMAX:
+			SendParams.SpeedMAX = SendParam;
+			break;
+
+		case PPR:
+			SendParams.PPR = SendParam;
+			break;
+		}
+
+		if(ParamsSendFlag)return -1;
+
+		SendData[0] = SendMode;
+		for(std::size_t i = 0 ; i != (SendData.size() - 1) ; ++i)
+			SendData[i+1] = (uint8_t)(SendParam_Converted >> 8 * (SendData.size() - (i+1)));
+
+		ControlAreaNetwork::SendData(SendData, UsingMotorDriverAddress);
+
+
+		return 0;
+	}
+
+	template<ParamSendMode SendMode>
+	int8_t MD_ParamSend(uint32_t SendParam)
+	{
+		static_assert(SendMode == SpeedMAX || SendMode == PPR);
+
+		uint32_t SendParam_Converted = BitsConvertion<uint32_t>(SendParam);
+		std::array<uint8_t, MotorDriverDataArraySize> SendData = {};
+
+		if constexpr:(SendMode == SpeedMAX)	SendParams.SpeedMAX	= SendParam;
+		if constexpr (SendMode == PPR)		SendParams.PPR		= SendParam;
+
+		if(ParamsSendFlag)return -1;
+
+		SendData[0] = SendMode;
+		for(std::size_t i = 0 ; i != (SendData.size() - 1) ; ++i)
+			SendData[i+1] = (uint8_t)(SendParam_Converted >> 8 * (SendData.size() - (i+1)));
+
+		ControlAreaNetwork::SendData(SendData, UsingMotorDriverAddress);
+
+
+		return 0;
+	}
+	inline void MD_ParamSend(const SendParamsType& SetDriverParams)
+	{
+		SendParams = SetDriverParams;
+		ParamsSendFlag = true;
+	}
+
+private:
+	uint8_t UsingMotorDriverAddress = 0;
+
+	SendParamsType SendParams;
+
+	MotorDriveMode NowMode = MotorDriveMode::Stop;
+
+	static constexpr size_t MotorDriverDataArraySize = 5;
+
+	template<class T, class U>
+	T BitsConvertion(U ConvData)
+	{
+		union
+		{
+			T ConvOut;
+			U ConvIn;
+		}Conv;
+		Conv.ConvIn = ConvData;
+		return Conv.ConvOut;
+	}
+
+	bool ParamsSendFlag = false;
+	void ParamSendTable();
+};
+
+#endif

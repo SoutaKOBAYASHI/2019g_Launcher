@@ -32,10 +32,19 @@ src/main.o: ../src/main.cpp \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp \
+ D:/Git/Libraries/inc/motor_driver.hpp D:/Git/Libraries/inc/can.hpp \
+ D:/Git/Libraries/inc/can.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:
 
@@ -103,10 +112,30 @@ D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:
 
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:
+
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:
 
-D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:
+
+D:/Git/Libraries/inc/motor_driver.hpp:
+
+D:/Git/Libraries/inc/can.hpp:
+
+D:/Git/Libraries/inc/can.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:

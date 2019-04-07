@@ -4,13 +4,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="fr.ac6.mcu.ide.build.CrossBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1239,22 +1239,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1/arm-none-eabi">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1/arm-none-eabi">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1/backward">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -2663,13 +2663,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="fr.ac6.mcu.ide.build.CrossBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -3898,22 +3898,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1/arm-none-eabi">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1/arm-none-eabi">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include/c++/8.2.1/backward">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include/c++/8.2.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/lib/gcc/arm-none-eabi/8.2.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/arm-none-eabi/include">
+					<entry kind="includePath" name="D:/tools/gcc-arm-none-eabi-8-2018-q4-major-win32/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">

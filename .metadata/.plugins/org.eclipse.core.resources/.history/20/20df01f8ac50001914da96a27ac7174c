@@ -1,6 +1,0 @@
-#include "rotary_encoder.h"
-
-void rotaryEncoder::configEncoderInterfaceMode_()
-{
-
-}

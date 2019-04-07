@@ -25,6 +25,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Libraries/src \
 StdPeriph_Driver/src \
 src \
 src/mySources \

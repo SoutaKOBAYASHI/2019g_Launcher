@@ -12,6 +12,7 @@ RM := rm -rf
 -include src/mySources/subdir.mk
 -include src/subdir.mk
 -include StdPeriph_Driver/src/subdir.mk
+-include Libraries/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 

@@ -1,0 +1,28 @@
+/*
+ * motor_driver.c
+ *
+ *  Created on: 2019/03/02
+ *      Author: User
+ */
+
+#include "motor_driver.h"
+
+#define sendDataSize	((uint8_t)5)
+
+/*
+ * モータドライバにCANでコマンドを送信
+ * 引数	: CANのハンドラ, MDコマンド, 送信するパラメータ, ドライバのアドレス
+ * 戻り値	: なし
+ */
+void motorDriverSetSpeed(CAN_HandleTypeDef* hcan, uint8_t cmd, int32_t setParam, uint8_t driverAddress)
+{
+	uint8_t sendDataArray[sendDataSize] = {};
+
+	sendDataArray[0] = cmd;
+	sendDataArray[1] = (uint8_t)(setParam >> 24);
+	sendDataArray[2] = (uint8_t)(setParam >> 16);
+	sendDataArray[3] = (uint8_t)(setParam >> 8);
+	sendDataArray[4] = (uint8_t)setParam;
+
+	CAN_send(hcan, driverAddress, sendDataArray, sendDataSize);
+}
