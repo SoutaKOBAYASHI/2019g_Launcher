@@ -43,8 +43,8 @@ src/main.o: ../src/main.cpp \
  D:/Git/Libraries/inc/can.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:
 
@@ -136,6 +136,6 @@ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:
 
-D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:
-
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:

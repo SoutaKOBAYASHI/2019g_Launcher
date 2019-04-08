@@ -18,7 +18,7 @@ void Speed_pid::speedPID_update()
 	nowSpeed_ = ( Min * readCount<double>() / ((double)ppr_ * controlInterval_));
 
 	const double dev_now = targetSpeed_ - nowSpeed;
-	nowCount_ += RotaryEncoder::readCount<uint32_t>();
+	nowCount_ += (uint32_t)RotaryEncoder::readCount<int32_t>();
 	RotaryEncoder::clearCount();
 
 	/*Calculation terms of PID.*/

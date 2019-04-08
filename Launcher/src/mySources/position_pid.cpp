@@ -6,6 +6,7 @@
  */
 
 #include <position_pid.hpp>
+#include <uart.hpp>
 
 void PositionPID::positionPID_update()
 {
@@ -38,8 +39,9 @@ void PositionPID::positionPID_update()
 			setSpeed = -constantValues_.maxSpeed;
 		}
 
-		MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
 		dev_before = dev_now;
+
+		MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
 	}
 	else
 	{

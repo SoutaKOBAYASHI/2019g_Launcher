@@ -127,7 +127,7 @@ int main(void)
 
 	IO_sigPins<ioName::sig1, ioState::input> input1;
 
-	UART uart1(UART::name::uart1);
+	UART uart1(UART::name::uart1, 115200);
 	uartSendString = [&](const std::string& sendString){ uart1.TransmitData(sendString); };
 
 	Sequence sequence;
@@ -175,12 +175,15 @@ void Sequence::sequenceUpdate_()
 							return waitCount == 0 ? false : true;
 						};
 
+	receiveCmd_ = receiveOrderFormat::throwShagai;
+
 	switch(nowSequence_)
 	{
 	case sequenceName::start :
 		MoveAngle::setTargetMovePosition(MoveAngle::movePositions::upPosition);
 		Launcher::setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-		eleValve.setNewState(EV::state::Reset, expendArmValve, fallArmValve, holdShagaiValve);
+		eleValve.setNewState(EV::state::Reset, expendArmValve, fallArmValve);
+		eleValve.setNewState(EV::state::Set, holdShagaiValve);
 		if(receiveCmd_ != receiveOrderFormat::start && Launcher::isGotZeroPoint && MoveAngle::isGotZeroPoint)
 		{
 			nowSequence_ = sequenceName::setGettingAngle;
@@ -204,7 +207,7 @@ void Sequence::sequenceUpdate_()
 
 	case sequenceName::expendArm:
 		eleValve.setNewState(EV::state::Set, expendArmValve);
-		waitCount = 500;
+		waitCount = 1000;
 		nowSequence_ = sequenceName::waitExpendingArm;
 		break;
 
@@ -214,7 +217,7 @@ void Sequence::sequenceUpdate_()
 
 	case sequenceName::fallArm:
 		eleValve.setNewState(EV::state::Set, fallArmValve);
-		waitCount = 500;
+		waitCount = 1000;
 		nowSequence_ = sequenceName::waitFallingArm;
 		break;
 
@@ -230,8 +233,8 @@ void Sequence::sequenceUpdate_()
 		break;
 
 	case sequenceName::getShagai:
-		eleValve.setNewState(EV::state::Set, holdShagaiValve);
-		waitCount = 500;
+		eleValve.setNewState(EV::state::Reset, holdShagaiValve);
+		waitCount = 1000;
 		nowSequence_ = sequenceName::waitGettingShagai;
 		break;
 
@@ -241,7 +244,7 @@ void Sequence::sequenceUpdate_()
 
 	case sequenceName::liftArm:
 		eleValve.setNewState(EV::state::Reset, fallArmValve);
-		waitCount = 500;
+		waitCount = 1000;
 		nowSequence_ = sequenceName::waitLiftingArm;
 		break;
 
@@ -251,7 +254,7 @@ void Sequence::sequenceUpdate_()
 
 	case sequenceName::shortenArm:
 		eleValve.setNewState(EV::state::Reset, expendArmValve);
-		waitCount = 500;
+		waitCount = 1000;
 		nowSequence_ = sequenceName::waitShortenningArm;
 		break;
 
@@ -277,17 +280,20 @@ void Sequence::sequenceUpdate_()
 		break;
 
 	case sequenceName::openArm:
-		eleValve.setNewState(EV::state::Reset, holdShagaiValve);
+		eleValve.setNewState(EV::state::Set, holdShagaiValve);
 		waitCount = 500;
 		nowSequence_ = sequenceName::waitOpennningArm;
 		break;
 
 	case sequenceName::waitOpennningArm:
-		if(!waiting())nowSequence_ = sequenceName::throwShagai;
+		if(!waiting())
+		{
+			Launcher::setLauncherSequence(Launcher::launcherSequence::launch);
+			nowSequence_ = sequenceName::throwShagai;
+		}
 		break;
 
 	case sequenceName::throwShagai:
-		Launcher::setLauncherSequence(Launcher::launcherSequence::launch);
 		if(Launcher::nowSequence == Launcher::launcherSequence::returnZeroPoint)
 		{
 			waitCount = 500;

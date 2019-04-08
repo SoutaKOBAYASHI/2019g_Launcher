@@ -9,12 +9,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="GPIO_InitStruct." key="selection"/>
+		<item value="holdShagaiValve" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="holdShagaiValve"/>
+			<item value="TIM3-&gt;CNT"/>
 			<item value="GPIO_InitStruct-&gt;"/>
 			<item value="-&gt;"/>
 			<item value="__BSD_VISIBLE"/>

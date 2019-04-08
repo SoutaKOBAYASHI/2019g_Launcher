@@ -15,9 +15,9 @@
 
 typedef struct
 {
-	const double P;
-	const double I;
-	const double D;
+	const float P;
+	const float I;
+	const float D;
 }PIDgain_positon;
 
 typedef struct
@@ -25,10 +25,11 @@ typedef struct
 	const PIDgain_positon useGain;
 
 	const encoderName useRotEnc;
-	const uint32_t rotEncPPR;
 	const uint8_t useDriverAdd;
 	const int32_t tolerance;
 	const int32_t maxSpeed;
+
+	const MotorDriver::SendParamsType motorDriverParams;
 
 }PositionPID_initStructType;
 
@@ -36,12 +37,12 @@ class PositionPID : protected RotaryEncoder, public MotorDriver
 {
 public:
 	PositionPID() = delete;
-	PositionPID(const PositionPID_initStructType& initStruct) :
+	PositionPID(const PositionPID_initStructType initStruct) :
 		RotaryEncoder(initStruct.useRotEnc),
 		MotorDriver(initStruct.useDriverAdd),
 		constantValues_(initStruct)
 	{
-
+		MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
 	}
 	inline void setTargetPosition(const int32_t setPosition){ targetPosition_ = setPosition; }
 	const int32_t& targetPosition = targetPosition_;
@@ -64,7 +65,7 @@ public:
 	const bool& isPositionPID_Enable = position_pid_enable_;
 
 	inline bool errorCheck() const
-		{ return (targetPosition - readPositionCount<int32_t>()) < constantValues_.tolerance ? true : false; }
+		{ return std::abs(targetPosition - readPositionCount<int32_t>()) < constantValues_.tolerance ? true : false; }
 
 	virtual ~PositionPID(){}
 

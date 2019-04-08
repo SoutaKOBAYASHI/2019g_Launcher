@@ -7,16 +7,18 @@
 
 #include <launcher.hpp>
 
+#include <array>
+#include <charconv>
+
 void Launcher::throwingShagai()
 {
-	static std::string sendString = std::to_string(Speed_pid::nowSpeed) + '\n';
-	uartSendString(sendString);
-	sendString.clear();
-
+	launchSign.setNewState(state::OFF);
+	brakingSign.setNewState(state::OFF);
 
 	switch(nowSequence_)
 	{
 	case launcherSequence::launch:
+		launchSign.setNewState(state::ON);
 		if(Speed_pid::readPositionCount<uint32_t>() < encCount_stopPoint)
 		{
 			Speed_pid::setEnableState(false);
@@ -30,8 +32,17 @@ void Launcher::throwingShagai()
 		break;
 
 	case launcherSequence::breaking:
-		if(Speed_pid::nowSpeed > 1.0)nowSequence_ = launcherSequence::returnZeroPoint;
-		else Speed_pid::MotorControl::setSpeed(-30);
+		brakingSign.setNewState(state::ON);
+		if(Speed_pid::nowSpeed > 10.0)
+		{
+			nowSequence_ = launcherSequence::returnZeroPoint;
+		}
+		else
+		{
+			Speed_pid::setEnableState(false);
+			Speed_pid::MotorControl::setSpeed(brakeDuty);
+		}
+
 		break;
 
 	case launcherSequence::returnZeroPoint:
@@ -47,18 +58,25 @@ void Launcher::throwingShagai()
 		}
 		break;
 	}
+
+	if(emergencySwitch.readNowState())Speed_pid::setEnableState(false);
 }
 
 void Launcher::launcherUpdate()
 {
 	getZeroPoint();
+
+	//std::string str = std::to_string(Speed_pid::readPositionCount<uint32_t>()) + '\n';
+	//uartSendString(str);
+
+	if(emergencySwitch.readNowState())MotorControl::setNewStateGate(MotorControl::gateEnableState::Disable);
+	else MotorControl::setNewStateGate(MotorControl::gateEnableState::Enable);
+
 	if(isGotZeroPoint)
 	{
 		throwingShagai();
 	}
-
-	std::string a = std::to_string(Speed_pid::readPositionCount<uint16_t>()) + '\n';
-	uartSendString(a);
+	if(emergencySwitch.readNowState())Speed_pid::setEnableState(false);
 }
 
 void Launcher::getZeroPoint()
@@ -74,22 +92,11 @@ void Launcher::getZeroPoint()
 		{
 			Speed_pid::setTargetSpeed(-1.0*getZeroPoint_motorDriveSpeed_);
 		}
-
-
-	}
-	if(zeroPointLimit.readNowState())
-	{
-		//led.setNewState(LED::ledColor::Red, LED::state::ON);
-	}
-	else
-	{
-		//led.setNewState(LED::ledColor::Red, LED::state::OFF);
 	}
 }
 
 void Launcher::limitSensorIntrrupt()
 {
-	//led.setNewState(LED::ledColor::Yellow, LED::state::OFF);
 	if(!isGotZeroPoint)
 	{
 		isGotZeroPoint_ = true;

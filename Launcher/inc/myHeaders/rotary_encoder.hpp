@@ -19,9 +19,9 @@ class RotaryEncoder
 {
 private:
 	const encoderName useRotEncName_;
-	TIM_TypeDef* const useTimer_;
 
 public:
+	TIM_TypeDef* const useTimer_;
 	RotaryEncoder() = delete;
 
 	RotaryEncoder(const encoderName useRotEnc)
@@ -95,8 +95,11 @@ protected:
 		if(useTimer_ == TIM2)configEncoderPins_timer2_();
 		else configEncoderPins_timer3_();
 	}
-	static inline TIM_TypeDef* getUseTimer_(encoderName useRotEnc)
-				{ return useRotEnc == encoderName::RotEnc1 ? TIM3 : TIM2; }
+	TIM_TypeDef* getUseTimer_(encoderName useRotEnc)
+	{
+		if(encoderName::RotEnc1 == useRotEnc) return TIM3;
+		return TIM2;
+	}
 };
 
 

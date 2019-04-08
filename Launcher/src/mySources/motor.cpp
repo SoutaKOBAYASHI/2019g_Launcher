@@ -41,7 +41,7 @@ void MotorControl::setSpeed(const int32_t setValue)
 	}
 	const std::string sendString =
 				"Duty : " + std::to_string(setValue) + '\n';
-	uartSendString(sendString);
+	//uartSendString(sendString);
 }
 
 void MotorControl::setSpeed(const int32_t setValue, const driveMode setMode)

@@ -17,8 +17,11 @@
 #include <board_io.hpp>
 #include <interrupt.hpp>
 #include <led.hpp>
+#include <emergencty.hpp>
 
-class Launcher : protected Speed_pid
+
+
+class Launcher : public Speed_pid
 {
 public:
 	enum class launcherSequence : uint8_t
@@ -30,6 +33,7 @@ public:
 
 	Launcher() : Speed_pid(encoderName::RotEnc1, motorPPR_, useGain_, 0.001)
 	{
+
 		Speed_pid::setNewStateGate(MotorControl::gateEnableState::Enable);
 		Speed_pid::setCount((uint32_t)defaultEncoderCount);
 
@@ -41,8 +45,14 @@ public:
 	}
 	virtual void update() override
 	{
+		/*
+		std::string sendStr = std::to_string(Speed_pid::readPositionCount<uint32_t>()) + '\n';
+		uartSendString(sendStr);
+		sendStr.clear();
+		*/
 		launcherUpdate();
 		Speed_pid::update();
+
 	}
 	const bool& isGotZeroPoint = isGotZeroPoint_;
 
@@ -62,9 +72,13 @@ private:
 	static constexpr uint32_t encCount_stopPoint = 23000;
 
 	/*members to get zero point*/
-	static constexpr double getZeroPoint_motorDriveSpeed_ = -1000;
-	static constexpr double throwing_motorDriveSpeed_ = -55000;
+	static constexpr double getZeroPoint_motorDriveSpeed_ = -100;
+	static constexpr double throwing_motorDriveSpeed_ = -10000;
+	static constexpr int32_t brakeDuty = -40;
 	bool isGotZeroPoint_ = false;
+
+	LED<ledColor::Yellow> launchSign;
+	LED<ledColor::Orange> brakingSign;
 
 	IO_sigPins<ioName::sig0, ioState::input> zeroPointLimit;
 	void getZeroPoint();

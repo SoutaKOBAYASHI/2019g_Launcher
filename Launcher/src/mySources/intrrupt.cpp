@@ -16,7 +16,7 @@ namespace systick
 		RCC_ClocksTypeDef RCC_Clocks;
 		RCC_GetClocksFreq(&RCC_Clocks);
 		SysTick_Config(RCC_Clocks.HCLK_Frequency / SysTickFrequency);
-		NVIC_SetPriority(SysTick_IRQn, 3);
+		NVIC_SetPriority(SysTick_IRQn, 1);
 	}
 
 	void additionCallFunction(std::function<void(void)>&& addFunc){ sysTick_callsFunctions.push_back(addFunc); }

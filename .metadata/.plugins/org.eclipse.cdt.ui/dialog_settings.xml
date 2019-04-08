@@ -30,6 +30,14 @@
 		<item value="false" key="testFileSelected"/>
 		<item value="true" key="stubSelected0"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="setCount"/>
+			<item value="TIM3CNT"/>
+		</list>
+	</section>
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="OptionalMessageDialog.hide.">

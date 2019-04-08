@@ -33,7 +33,8 @@ src/mySources/position_pid.o: ../src/mySources/position_pid.cpp \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_can.h \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h \
  D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:
 
@@ -106,3 +107,5 @@ D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h:
 D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:

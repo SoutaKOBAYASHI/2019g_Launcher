@@ -38,7 +38,8 @@ src/mySources/launcher.o: ../src/mySources/launcher.cpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:
 
@@ -119,3 +120,5 @@ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:

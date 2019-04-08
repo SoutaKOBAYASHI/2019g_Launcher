@@ -38,7 +38,8 @@ src/mySources/move_angle.o: ../src/mySources/move_angle.cpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp \
  D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp \
- D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp \
+ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:
 
@@ -121,3 +122,5 @@ D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/led.hpp:
 
 D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:
+
+D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:

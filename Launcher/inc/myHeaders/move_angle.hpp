@@ -18,15 +18,16 @@
 #include <board_io.hpp>
 #include <led.hpp>
 #include <emergencty.hpp>
+#include <uart.hpp>
 
 class MoveAngle : private PositionPID
 {
 public:
 	enum class movePositions : int32_t
 	{
-		downPosition		= 0,
-		throwingPosition	= 1,
-		upPosition			= 2
+		downPosition		= -1000,
+		throwingPosition	= -500000,
+		upPosition			= -1000000
 	};
 	MoveAngle() : PositionPID(initStruct_)
 	{
@@ -49,16 +50,21 @@ public:
 
 private:
 	static constexpr uint8_t useMotorDriverAdd_ = 0x10;
-	static constexpr int32_t driveSpeed_ = 90;
+	static constexpr int32_t driveSpeed_ = 1000;
+	static constexpr int32_t getZeroPointSpeed = 100;
 
-	static constexpr PositionPID_initStructType initStruct_
+	LED<ledColor::Red> PositionOK;
+
+	const PositionPID_initStructType initStruct_
 	{
-		{0.0, 0.0, 0.0},
+		{0.100f, 0.0f, 0.070f},
+
 		encoderName::RotEnc2,
-		8192,
 		0x10,
 		100,
-		10
+		1200,
+
+		{0.05f, 0.005f, 0.005f, 10000, 8192}
 	};
 
 	bool isGotZeroPoint_ = false;
@@ -68,10 +74,8 @@ private:
 	IO_sigPins<ioName::sig2, ioState::input, pinPullDirection::up> upSig;
 	IO_sigPins<ioName::sig3, ioState::input, pinPullDirection::up> downSig;
 
-	static constexpr int32_t getZeroPointSpeed = 100;
-
 	void switchControl_();
-	inline void getZeroPoint_(){ PositionPID::SetSpeed(getZeroPointSpeed, MotorDriver::MotorDriveMode::PID); }
+	void getZeroPoint_();
 	void zeroPointIntrrupt_();
 	void moveAngle_Update();
 };

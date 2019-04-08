@@ -1,3 +1,4 @@
+LaunchTargetManager/configs/Launcher\ Run=org.eclipse.launchbar.core.launchTargetType.local\:\u30ED\u30FC\u30AB\u30EB
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u30ED\u30FC\u30AB\u30EB/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u30ED\u30FC\u30AB\u30EB/os=win32
 configDescList=org.eclipse.launchbar.core.descriptorType.default\:Launcher Run

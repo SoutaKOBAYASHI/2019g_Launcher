@@ -1,0 +1,185 @@
+#include "can.hpp"
+
+namespace ControlAreaNetwork {
+
+
+
+#if defined(STM32F0) || defined(STM32F1)
+void Config(uint8_t Address)
+{
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA , ENABLE);
+
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Pin		= GPIO_Pin_11 | GPIO_Pin_12;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_PuPd	= GPIO_PuPd_NOPULL;
+	GPIO_InitStructure.GPIO_OType	= GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_Speed	= GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA , &GPIO_InitStructure);
+
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource11 , GPIO_AF_4);
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource12 , GPIO_AF_4);
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN , ENABLE);
+
+	CAN_InitTypeDef CAN_InitStructure;
+	CAN_StructInit(&CAN_InitStructure);
+	CAN_InitStructure.CAN_Mode 		= CAN_Mode_Normal;
+	CAN_InitStructure.CAN_TXFP 		= ENABLE;
+	CAN_InitStructure.CAN_Prescaler = 6;
+	CAN_Init(CAN , &CAN_InitStructure);
+
+	CAN_FilterInitTypeDef CAN_FilterInitStructure;
+	CAN_FilterInitStructure.CAN_FilterNumber			= 0;
+
+	/*ID-List Mode/
+
+	CAN_FilterInitStructure.CAN_FilterMode 			= CAN_FilterMode_IdList;
+	CAN_FilterInitStructure.CAN_FilterScale			= CAN_FilterScale_32bit;
+	CAN_FilterInitStructure.CAN_FilterMaskIdHigh	= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterMaskIdLow		= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterIdHigh		= RotarySwitch_Read() << 5;
+	CAN_FilterInitStructure.CAN_FilterIdLow			= 0x0000;
+
+	/END*/
+
+	/*ID-Mask Mode*/
+
+	CAN_FilterInitStructure.CAN_FilterMode 				= CAN_FilterMode_IdMask;
+	CAN_FilterInitStructure.CAN_FilterScale				= CAN_FilterScale_32bit;
+	CAN_FilterInitStructure.CAN_FilterMaskIdHigh		= 0xFFE0;
+	CAN_FilterInitStructure.CAN_FilterMaskIdLow			= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterIdHigh			= (uint16_t)(Address << 5);
+	CAN_FilterInitStructure.CAN_FilterIdLow				= 0x0000;
+
+	/*END*/
+
+	CAN_FilterInitStructure.CAN_FilterFIFOAssignment	= CAN_FilterFIFO0;
+	CAN_FilterInitStructure.CAN_FilterActivation		= ENABLE;
+	CAN_FilterInit(&CAN_FilterInitStructure);
+
+	CAN_ITConfig(CAN , CAN_IT_FMP0 , ENABLE);
+
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStructure.NVIC_IRQChannel			= CEC_CAN_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelPriority	= 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd		= ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
+}
+
+void SendData(uint8_t *Data, uint8_t DataLenge, uint8_t Address)
+{
+	while(!(CAN->TSR & CAN_TSR_TME0) && !(CAN->TSR & CAN_TSR_TME1) && !(CAN->TSR & CAN_TSR_TME2)); //To wait while mail boxes are pending.
+	CanTxMsg CanTxMsgStructure;
+	CanTxMsgStructure.StdId		= (uint32_t)Address;
+	CanTxMsgStructure.IDE		= CAN_ID_STD;
+	CanTxMsgStructure.RTR		= CAN_RTR_DATA;
+	CanTxMsgStructure.DLC		= DataLenge;
+	for(uint8_t i = 0 ; i < DataLenge ; i++)CanTxMsgStructure.Data[i] = Data[i];
+	CAN_Transmit(CAN , &CanTxMsgStructure);
+}
+
+void SendRemote(uint8_t Address)
+{
+	while(!(CAN->TSR & CAN_TSR_TME0) || !(CAN->TSR & CAN_TSR_TME1) || !(CAN->TSR & CAN_TSR_TME2)); //To wait while mail boxes are pending.
+	CanTxMsg CanTxMsgStructure;
+	CanTxMsgStructure.StdId		= (uint32_t)Address;
+	CanTxMsgStructure.IDE		= CAN_ID_STD;
+	CanTxMsgStructure.RTR		= CAN_RTR_REMOTE;
+	CanTxMsgStructure.DLC		= 0;
+	CAN_Transmit(CAN , &CanTxMsgStructure);
+	return;
+}
+#endif
+
+#if defined(STM32F4)
+void Config(uint8_t Address)
+{
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA , ENABLE);
+
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Pin		= GPIO_Pin_11 | GPIO_Pin_12;
+	GPIO_InitStructure.GPIO_Mode	= GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_PuPd	= GPIO_PuPd_NOPULL;
+	GPIO_InitStructure.GPIO_OType	= GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_Speed	= GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA , &GPIO_InitStructure);
+
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource11 , GPIO_AF_CAN1);
+	GPIO_PinAFConfig(GPIOA , GPIO_PinSource12 , GPIO_AF_CAN1);
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN1 , ENABLE);
+
+	CAN_InitTypeDef CAN_InitStructure;
+	CAN_StructInit(&CAN_InitStructure);
+	CAN_InitStructure.CAN_Mode 		= CAN_Mode_Normal;
+	CAN_InitStructure.CAN_TXFP 		= ENABLE;
+	CAN_InitStructure.CAN_Prescaler = 6;
+	CAN_InitStructure.CAN_BS1 = CAN_BS1_4tq;
+	CAN_InitStructure.CAN_BS2 = CAN_BS2_2tq;
+	CAN_Init(CAN1 , &CAN_InitStructure);
+
+	CAN_FilterInitTypeDef CAN_FilterInitStructure;
+	CAN_FilterInitStructure.CAN_FilterNumber			= 0;
+
+	/*ID-List Mode/
+
+	CAN_FilterInitStructure.CAN_FilterMode 			= CAN_FilterMode_IdList;
+	CAN_FilterInitStructure.CAN_FilterScale			= CAN_FilterScale_32bit;
+	CAN_FilterInitStructure.CAN_FilterMaskIdHigh	= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterMaskIdLow		= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterIdHigh		= RotarySwitch_Read() << 5;
+	CAN_FilterInitStructure.CAN_FilterIdLow			= 0x0000;
+
+	/END*/
+
+	/*ID-Mask Mode*/
+
+	CAN_FilterInitStructure.CAN_FilterMode 				= CAN_FilterMode_IdMask;
+	CAN_FilterInitStructure.CAN_FilterScale				= CAN_FilterScale_32bit;
+	CAN_FilterInitStructure.CAN_FilterMaskIdHigh		= 0xFFE0;
+	CAN_FilterInitStructure.CAN_FilterMaskIdLow			= 0x0000;
+	CAN_FilterInitStructure.CAN_FilterIdHigh			= (uint16_t)(Address << 5);
+	CAN_FilterInitStructure.CAN_FilterIdLow				= 0x0000;
+
+	/*END*/
+
+	CAN_FilterInitStructure.CAN_FilterFIFOAssignment	= CAN_FilterFIFO0;
+	CAN_FilterInitStructure.CAN_FilterActivation		= ENABLE;
+	CAN_FilterInit(&CAN_FilterInitStructure);
+
+	CAN_ITConfig(CAN1 , CAN_IT_FMP0 , ENABLE);
+
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStructure.NVIC_IRQChannel						= CAN1_RX0_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority	= 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd					= ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
+}
+
+void SendData(uint8_t *Data, uint8_t DataLenge, uint8_t Address)
+{
+	while(!(CAN1->TSR & CAN_TSR_TME0) || !(CAN1->TSR & CAN_TSR_TME1) || !(CAN1->TSR & CAN_TSR_TME2)); //To wait while mail boxes are pending.
+	CanTxMsg CanTxMsgStructure;
+	CanTxMsgStructure.StdId		= (uint32_t)Address;
+	CanTxMsgStructure.IDE		= CAN_ID_STD;
+	CanTxMsgStructure.RTR		= CAN_RTR_DATA;
+	CanTxMsgStructure.DLC		= DataLenge;
+	for(uint8_t i = 0 ; i < DataLenge ; i++)CanTxMsgStructure.Data[i] = Data[i];
+	CAN_Transmit(CAN1 , &CanTxMsgStructure);
+}
+
+void SendRemote(uint8_t Address)
+{
+	while(!(CAN1->TSR & CAN_TSR_TME0) || !(CAN1->TSR & CAN_TSR_TME1) || !(CAN1->TSR & CAN_TSR_TME2)); //To wait while mail boxes are pending.
+	CanTxMsg CanTxMsgStructure;
+	CanTxMsgStructure.StdId		= (uint32_t)Address;
+	CanTxMsgStructure.IDE		= CAN_ID_STD;
+	CanTxMsgStructure.RTR		= CAN_RTR_REMOTE;
+	CanTxMsgStructure.DLC		= 0;
+	CAN_Transmit(CAN1 , &CanTxMsgStructure);
+	return;
+}
+#endif
+
+} // namespase ControlAreaNetwork

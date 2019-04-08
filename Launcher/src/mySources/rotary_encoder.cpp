@@ -28,12 +28,13 @@ void RotaryEncoder::configEncoderPins_timer2_()
 void RotaryEncoder::configEncoderPins_timer3_()
 {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 
 	GPIO_InitTypeDef gpioInitStruct;
 	gpioInitStruct.GPIO_Pin		= GPIO_Pin_6;
 	gpioInitStruct.GPIO_Mode	= GPIO_Mode_AF;
 	gpioInitStruct.GPIO_PuPd	= GPIO_PuPd_UP;
-	gpioInitStruct.GPIO_Speed	= GPIO_Speed_100MHz;
+	gpioInitStruct.GPIO_Speed	= GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &gpioInitStruct);
 
 	gpioInitStruct.GPIO_Pin		= GPIO_Pin_5;
