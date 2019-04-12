@@ -175,7 +175,7 @@ void Sequence::sequenceUpdate_()
 							return waitCount == 0 ? false : true;
 						};
 
-	receiveCmd_ = receiveOrderFormat::throwShagai;
+	//receiveCmd_ = receiveOrderFormat::throwShagai;
 
 	switch(nowSequence_)
 	{
@@ -306,6 +306,7 @@ void Sequence::sequenceUpdate_()
 		{
 			sendConpliteCmd_(compliteCmdFormat::throwingComplite);
 			nowSequence_ = sequenceName::start;
+			receiveCmd_ = receiveOrderFormat::start;
 		}
 		break;
 	}

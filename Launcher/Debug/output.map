@@ -10502,8 +10502,8 @@ OUTPUT(Launcher.elf elf32-littlearm)
  .debug_aranges
                 0x00000000       0x28 startup/startup_stm32.o
 
-.debug_str      0x00000000       0x55
- .debug_str     0x00000000       0x55 startup/startup_stm32.o
+.debug_str      0x00000000       0x66
+ .debug_str     0x00000000       0x66 startup/startup_stm32.o
 
 .debug_ranges   0x00000000       0x20
  .debug_ranges  0x00000000       0x20 startup/startup_stm32.o

@@ -15,7 +15,7 @@ startup/%.o: ../startup/%.s
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Assembler'
 	@echo $(PWD)
-	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"D:/Git/Libraries/inc" -g -o "$@" "$<"
+	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"D:/GoogleDrive/user/Git/Libraries/inc" -g -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

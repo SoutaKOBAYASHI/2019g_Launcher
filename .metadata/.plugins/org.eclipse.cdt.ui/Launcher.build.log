@@ -1,35 +1,22 @@
-03:07:35 **** インクリメンタル・ビルド of configuration Debug for project Launcher ****
+20:10:58 **** インクリメンタル・ビルド of configuration Debug for project Launcher ****
 make -j8 all 
-Building file: ../src/mySources/launcher.cpp
-Building file: ../src/main.cpp
+Building file: D:/GoogleDrive/user/Git/Libraries/src/can.cpp
 Invoking: MCU G++ Compiler
-Invoking: MCU G++ Compiler
-D:\Git\2019g\2019g_Launcher\Launcher\Debug
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -D__GXX_EXPERIMENTAL_CXX17__ -I"D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"D:/Git/Libraries/inc" -O0 -Wall -Wconversion -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
-D:\Git\2019g\2019g_Launcher\Launcher\Debug
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -D__GXX_EXPERIMENTAL_CXX17__ -I"D:/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/inc" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"D:/Git/Libraries/inc" -O0 -Wall -Wconversion -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-In file included from D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:188,
-                 from D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:819,
-                 from ../src/main.cpp:17:
-D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h: In function 'int32_t __REVSH(int32_t)':
-D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h:534:35: warning: conversion from 'int32_t' {aka 'long int'} to 'short unsigned int' may change value [-Wconversion]
+D:\GoogleDrive\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -D__GXX_EXPERIMENTAL_CXX17__ -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"D:/GoogleDrive/user/Git/Libraries/inc" -O0 -Wall -Wconversion -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/can.d" -MT"Libraries/src/can.o" -o "Libraries/src/can.o" "D:/GoogleDrive/user/Git/Libraries/src/can.cpp"
+In file included from D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:188,
+                 from D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:819,
+                 from D:/GoogleDrive/user/Git/Libraries/inc/can.hpp:21,
+                 from D:/GoogleDrive/user/Git/Libraries/src/can.cpp:1:
+D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h: In function 'int32_t __REVSH(int32_t)':
+D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h:534:35: warning: conversion from 'int32_t' {aka 'long int'} to 'short unsigned int' may change value [-Wconversion]
    return (short)__builtin_bswap16(value);
                                    ^~~~~
-In file included from D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:188,
-                 from D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:819,
-                 from D:/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:13,
-                 from ../src/mySources/launcher.cpp:8:
-D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h: In function 'int32_t __REVSH(int32_t)':
-D:/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmInstr.h:534:35: warning: conversion from 'int32_t' {aka 'long int'} to 'short unsigned int' may change value [-Wconversion]
-   return (short)__builtin_bswap16(value);
-                                   ^~~~~
-Finished building: ../src/mySources/launcher.cpp
- 
-Finished building: ../src/main.cpp
+Finished building: D:/GoogleDrive/user/Git/Libraries/src/can.cpp
  
 Building target: Launcher.elf
 Invoking: MCU G++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Xlinker -print-memory-usage -T"D:/Git/2019g/2019g_Launcher/Launcher/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "Launcher.elf" @"objects.list"   -lm
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Xlinker -print-memory-usage -T"D:/GoogleDrive/user/Git/2019g/2019g_Launcher/Launcher/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "Launcher.elf" @"objects.list"   -lm
 Memory region         Used Size  Region Size  %age Used
              RAM:        3856 B       128 KB      2.94%
              ROM:      118684 B         1 MB     11.32%
@@ -43,5 +30,5 @@ arm-none-eabi-size "Launcher.elf"
  116128	   2532	   1352	 120012	  1d4cc	Launcher.elf
  
 
-03:07:37 Build Finished (took 2s.123ms)
+20:11:00 Build Finished (took 1s.813ms)
 
