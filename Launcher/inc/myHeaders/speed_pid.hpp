@@ -31,9 +31,7 @@ public:
 	: RotaryEncoder(useRotEnc),
 	  ppr_(motorPPR),
 	  useGains_speed_(useGains),
-	  controlInterval_(controlInterval),
-	  nowSpeed_(0.0),
-	  targetSpeed_(0.0)
+	  controlInterval_(controlInterval)
 	{
 
 	}
@@ -65,9 +63,9 @@ private:
 	void speedPID_update();
 
 protected:
-	double nowSpeed_;
-	double targetSpeed_;
-	bool speed_pid_enable_ = false;
+	double nowSpeed_		= 0.0;
+	double targetSpeed_		= 0.0;
+	bool speed_pid_enable_	= false;
 	uint32_t nowCount_ = RotaryEncoder::readCount<uint32_t>();
 
 };

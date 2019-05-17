@@ -12,49 +12,52 @@ void MoveAngle::switchControl_()
 {
 	if(!upSig.readNowState() && !emergencySwitch.readNowState())
 	{
-		PositionPID::SetSpeed(driveSpeed_, MotorDriver::MotorDriveMode::PID);
+		setMotorPidSpeed_safety(driveSpeed_);
 	}
 	else if(!downSig.readNowState() && !emergencySwitch.readNowState())
 	{
-		PositionPID::SetSpeed(-1*driveSpeed_, MotorDriver::MotorDriveMode::PID);
+		setMotorPidSpeed_safety(-1*driveSpeed_);
 	}
 	else
 	{
-		if(isGotZeroPoint && !isPositionPID_Enable)PositionPID::SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+		if(isGotZeroPoint && !moveAngleMotor_.isPositionPID_Enable)moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
 	}
 }
 void MoveAngle::zeroPointIntrrupt_()
 {
 	if(isGotZeroPoint_)return;
-	PositionPID::SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
-	PositionPID::setPositionCount((int32_t)movePositions::downPosition);
+	moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+	moveAngleMotor_.setPositionCount((int32_t)movePositions::downPosition);
 	isGotZeroPoint_ = true;
 }
 void MoveAngle::moveAngle_Update()
 {
 	switchControl_();
-	if(emergencySwitch.readNowState())PositionOK.setNewState(state::ON);
-	else PositionOK.setNewState(state::OFF);
 
-	if(!upSig.readNowState() || !downSig.readNowState())
+	if(!upSig.readNowState() || !downSig.readNowState() || emergencySwitch.readNowState())
 	{
-		PositionPID::setEnableState(false);
+		moveAngleMotor_.setEnableState(false);
 	}
 	else if(!emergencySwitch.readNowState())
 	{
 		if(!isGotZeroPoint)
 		{
 			getZeroPoint_();
-			PositionPID::setEnableState(false);
+			moveAngleMotor_.setEnableState(false);
 		}
 		else
 		{
-			PositionPID::setEnableState(true);
+			moveAngleMotor_.setEnableState(true);
 		}
 	}
 }
 void MoveAngle::getZeroPoint_()
 {
-	PositionPID::SetSpeed(getZeroPointSpeed, MotorDriver::MotorDriveMode::PID);
+	setMotorPidSpeed_safety(getZeroPointSpeed);
 }
 
+void MoveAngle::setMotorPidSpeed_safety(int32_t setSpeed)
+{
+	if(zeroPoint.readNowState() && ((setSpeed > 0) == downDirectionIsTrue))setSpeed = 0;
+	if(!emergencySwitch.readNowState())moveAngleMotor_.SetSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
+}

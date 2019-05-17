@@ -13,111 +13,45 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <string>
+#include <charconv>
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_conf.h"
 
-#include <motor.hpp>
-#include <electric_valve.hpp>
-#include <led.hpp>
-#include <rotary_encoder.hpp>
-#include <uart.hpp>
-#include <speed_pid.hpp>
-#include <functional>
-#include <vector>
-#include <interrupt.hpp>
-#include <board_io.hpp>
-#include <motor_driver.hpp>
-#include <can.hpp>
-#include <position_pid.hpp>
-#include <launcher.hpp>
-#include <move_angle.hpp>
+#include <sequence.hpp>
 
 constexpr int gcc_version = __GNUC__ ;
 constexpr int gcc_minorVersion = __GNUC_MINOR__;
 
-constexpr uint8_t MainBoardAddress	= 0x00;
-constexpr uint8_t OwnAddress		= 0x01;
+UART* uart_ = nullptr;
+
+void a(const CanRxMsg& receiveRx)
+{
+	if(receiveRx.Data[0] == 0x00 && receiveRx.Data[1] == 0x27)
+	{
+		const int16_t x_value = (uint16_t)receiveRx.Data[3] << 8 | (uint16_t)receiveRx.Data[2];
+		const int16_t y_value = (uint16_t)receiveRx.Data[5] << 8 | (uint16_t)receiveRx.Data[4];
+
+		char sendChar_x[10] = {};
+		char sendChar_y[10] = {};
+		auto sendChar_x_begin = std::begin(sendChar_x);
+		auto sendChar_x_end = std::end(sendChar_x);
+		auto sendChar_y_begin = std::begin(sendChar_y);
+		auto sendChar_y_end = std::end(sendChar_y);
+
+		std::to_chars(sendChar_x_begin, sendChar_x_end, x_value);
+		std::to_chars(sendChar_y_begin, sendChar_y_end, y_value);
+
+		uart_->TransmitData(sendChar_x, 10);
+		uart_->TransmitData(',');
+		uart_->TransmitData(' ');
+		uart_->TransmitData(sendChar_y, 10);
+		uart_->TransmitData('\n');
+
+	}
+}
 
 void clockInit();
-
-class Sequence : private MoveAngle, private Launcher
-{
-public:
-	Sequence()
-	{
-		systick::additionCallFunction( [&]{ update(); } );
-		CAN_intrrupt::additionCallFunction( [&](const CanRxMsg& receiveData){ orderReceive_(receiveData); } );
-	}
-	virtual ~Sequence(){}
-private:
-	enum class sequenceName
-	{
-		start,
-
-		setGettingAngle,
-		waitSettingGetttingAngle,
-
-		expendArm,
-		waitExpendingArm,
-
-		fallArm,
-		waitFallingArm,
-
-		getShagai,
-		waitGettingShagai,
-
-		liftArm,
-		waitLiftingArm,
-
-		shortenArm,
-		waitShortenningArm,
-
-		setThrowingAngle,
-		waitSettingThrowingAngle,
-
-		openArm,
-		waitOpennningArm,
-
-		throwShagai,
-		waitThrowingShagai
-	};
-	enum class receiveOrderFormat : uint8_t
-	{
-		start = 0x01,
-		fallArm = 0x02,
-		getShagai = 0x03,
-		throwShagai = 0x04
-	};
-	enum class compliteCmdFormat : uint8_t
-	{
-		standbyGettingShagai = 0x01,
-		gettigShagai = 0x02,
-		throwingComplite = 0x03
-	};
-
-	sequenceName nowSequence_ = sequenceName::start;
-	receiveOrderFormat receiveCmd_ = receiveOrderFormat::start;
-
-	EV eleValve;
-
-	static constexpr EV::name expendArmValve = EV::name::EV0;
-	static constexpr EV::name fallArmValve = EV::name::EV1;
-	static constexpr EV::name holdShagaiValve = EV::name::EV2;
-
-	virtual void update() final
-	{
-		sequenceUpdate_();
-		MoveAngle::update();
-		Launcher::update();
-	}
-	void sequenceUpdate_();
-	void sendConpliteCmd_(const compliteCmdFormat sendCmd);
-	void orderReceive_(const CanRxMsg& receiveData);
-};
-
-
-
 
 int main(void)
 {
@@ -125,14 +59,21 @@ int main(void)
 	systick::init();
 	ControlAreaNetwork::Config(OwnAddress);
 
-	IO_sigPins<ioName::sig1, ioState::input> input1;
+	CAN_intrrupt::additionCallFunction(a);
+	//IO_sigPins<ioName::sig1, ioState::input> input1;
 
-	UART uart1(UART::name::uart1, 115200);
-	uartSendString = [&](const std::string& sendString){ uart1.TransmitData(sendString); };
+	/*configuration uart1.*/
+	uart_ = new UART(UART::name::uart1, 9600);
+
+	//uartSendString = [&](const std::string& sendString){ uart1.TransmitData(sendString); };
 
 	Sequence sequence;
 
-	while(true);
+	const std::string a = "HelloWorld!\n";
+	while(true)
+	{
+		uartSendString(a);
+	}
 	return 0;
 }
 
@@ -163,160 +104,4 @@ void clockInit()
 	RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
 
 	while(RCC_GetSYSCLKSource() != 0x08);
-}
-
-void Sequence::sequenceUpdate_()
-{
-	static uint16_t waitCount = 0;
-
-	/*This lambda function returns true if it has to wait. */
-	auto waiting = [&]	{
-							if(waitCount > 0)waitCount--;
-							return waitCount == 0 ? false : true;
-						};
-
-	//receiveCmd_ = receiveOrderFormat::throwShagai;
-
-	switch(nowSequence_)
-	{
-	case sequenceName::start :
-		MoveAngle::setTargetMovePosition(MoveAngle::movePositions::upPosition);
-		Launcher::setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-		eleValve.setNewState(EV::state::Reset, expendArmValve, fallArmValve);
-		eleValve.setNewState(EV::state::Set, holdShagaiValve);
-		if(receiveCmd_ != receiveOrderFormat::start && Launcher::isGotZeroPoint && MoveAngle::isGotZeroPoint)
-		{
-			nowSequence_ = sequenceName::setGettingAngle;
-		}
-		break;
-
-	case sequenceName::setGettingAngle :
-		MoveAngle::setTargetMovePosition(MoveAngle::movePositions::downPosition);
-		Launcher::setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-		if(MoveAngle::isAnglePID_OK())
-		{
-			waitCount = 200;
-			nowSequence_ = sequenceName::waitSettingGetttingAngle;
-		}
-		break;
-
-
-	case sequenceName::waitSettingGetttingAngle :
-		if(!waiting())nowSequence_ = sequenceName::expendArm;
-		break;
-
-	case sequenceName::expendArm:
-		eleValve.setNewState(EV::state::Set, expendArmValve);
-		waitCount = 1000;
-		nowSequence_ = sequenceName::waitExpendingArm;
-		break;
-
-	case sequenceName::waitExpendingArm:
-		if(!waiting())nowSequence_ = sequenceName::fallArm;
-		break;
-
-	case sequenceName::fallArm:
-		eleValve.setNewState(EV::state::Set, fallArmValve);
-		waitCount = 1000;
-		nowSequence_ = sequenceName::waitFallingArm;
-		break;
-
-	case sequenceName::waitFallingArm:
-		if(!waiting())
-		{
-			sendConpliteCmd_(compliteCmdFormat::standbyGettingShagai);
-			if(receiveCmd_ == receiveOrderFormat::getShagai || receiveCmd_ == receiveOrderFormat::throwShagai)
-			{
-				nowSequence_ = sequenceName::getShagai;
-			}
-		}
-		break;
-
-	case sequenceName::getShagai:
-		eleValve.setNewState(EV::state::Reset, holdShagaiValve);
-		waitCount = 1000;
-		nowSequence_ = sequenceName::waitGettingShagai;
-		break;
-
-	case sequenceName::waitGettingShagai:
-		if(!waiting())nowSequence_ = sequenceName::liftArm;
-		break;
-
-	case sequenceName::liftArm:
-		eleValve.setNewState(EV::state::Reset, fallArmValve);
-		waitCount = 1000;
-		nowSequence_ = sequenceName::waitLiftingArm;
-		break;
-
-	case sequenceName::waitLiftingArm:
-		if(!waiting())nowSequence_ = sequenceName::shortenArm;
-		break;
-
-	case sequenceName::shortenArm:
-		eleValve.setNewState(EV::state::Reset, expendArmValve);
-		waitCount = 1000;
-		nowSequence_ = sequenceName::waitShortenningArm;
-		break;
-
-	case sequenceName::waitShortenningArm:
-		if(!waiting())nowSequence_ = sequenceName::setThrowingAngle;
-		break;
-
-	case sequenceName::setThrowingAngle:
-		MoveAngle::setTargetMovePosition(MoveAngle::movePositions::throwingPosition);
-		if(MoveAngle::isAnglePID_OK())
-		{
-			waitCount = 200;
-			nowSequence_ = sequenceName::waitSettingThrowingAngle;
-		}
-		break;
-
-	case sequenceName::waitSettingThrowingAngle:
-		if(!waiting())
-		{
-			sendConpliteCmd_(compliteCmdFormat::gettigShagai);
-			if(receiveCmd_ == receiveOrderFormat::throwShagai)nowSequence_ = sequenceName::openArm;
-		}
-		break;
-
-	case sequenceName::openArm:
-		eleValve.setNewState(EV::state::Set, holdShagaiValve);
-		waitCount = 500;
-		nowSequence_ = sequenceName::waitOpennningArm;
-		break;
-
-	case sequenceName::waitOpennningArm:
-		if(!waiting())
-		{
-			Launcher::setLauncherSequence(Launcher::launcherSequence::launch);
-			nowSequence_ = sequenceName::throwShagai;
-		}
-		break;
-
-	case sequenceName::throwShagai:
-		if(Launcher::nowSequence == Launcher::launcherSequence::returnZeroPoint)
-		{
-			waitCount = 500;
-			nowSequence_ = sequenceName::waitThrowingShagai;
-		}
-		break;
-
-	case sequenceName::waitThrowingShagai:
-		if(!waiting())
-		{
-			sendConpliteCmd_(compliteCmdFormat::throwingComplite);
-			nowSequence_ = sequenceName::start;
-			receiveCmd_ = receiveOrderFormat::start;
-		}
-		break;
-	}
-}
-void Sequence::sendConpliteCmd_(const compliteCmdFormat sendCmd)
-{
-	const std::array<uint8_t, 2> sendData = { OwnAddress, (uint8_t)sendCmd };
-	ControlAreaNetwork::SendData(sendData, MainBoardAddress);
-}
-void Sequence::orderReceive_(const CanRxMsg& receiveData)
-{
-	if(receiveData.Data[0] == MainBoardAddress) receiveCmd_ = (receiveOrderFormat)receiveData.Data[1];
 }

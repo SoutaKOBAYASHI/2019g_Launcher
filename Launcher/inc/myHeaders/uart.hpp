@@ -29,10 +29,13 @@ public:
 	}
 
 	/*transmit a byte.*/
-	void TransmitData(uint8_t sendByte);
+	void TransmitData(const uint8_t sendByte);
 
 	/*overloaded functions of transmitting.*/
+	inline void TransmitData(const char sendByte){ TransmitData((uint8_t)sendByte); }
+
 	inline void TransmitData(const uint8_t* pSendData, const size_t size){ for(size_t i = 0;i < size;i++)TransmitData(*(pSendData+i)); }
+	inline void TransmitData(const char* pSendData, const size_t size){ for(size_t i = 0;i < size;i++)TransmitData(*(pSendData+i)); }
 
 	inline void TransmitData(const std::string& sendString) { TransmitData((uint8_t*)sendString.c_str(), sendString.size()); }
 	template<size_t S>

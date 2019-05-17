@@ -20,7 +20,7 @@
 #include <emergencty.hpp>
 #include <uart.hpp>
 
-class MoveAngle : private PositionPID
+class MoveAngle
 {
 public:
 	enum class movePositions : int32_t
@@ -29,7 +29,7 @@ public:
 		throwingPosition	= -500000,
 		upPosition			= -1000000
 	};
-	MoveAngle() : PositionPID(initStruct_)
+	MoveAngle() : moveAngleMotor_(initStruct_)
 	{
 		EXTI1Intrrupt::init(0);
 		EXTI1Intrrupt::additionCallFunction( [&]{ zeroPointIntrrupt_(); } );
@@ -37,23 +37,26 @@ public:
 
 	const bool& isGotZeroPoint = isGotZeroPoint_;
 
-	inline bool isAnglePID_OK(){ return PositionPID::errorCheck(); }
+	inline bool isAnglePID_OK(){ return moveAngleMotor_.errorCheck(); }
 
-	virtual void update() override
+	virtual void update()
 	{
 		moveAngle_Update();
-		PositionPID::update();
+		moveAngleMotor_.update();
 	}
 
 	inline void setTargetMovePosition(const movePositions setPosition)
-			{ PositionPID::setTargetPosition((int32_t)setPosition); }
+			{ moveAngleMotor_.setTargetPosition((int32_t)setPosition); }
 
+	virtual ~MoveAngle(){}
 private:
 	static constexpr uint8_t useMotorDriverAdd_ = 0x10;
 	static constexpr int32_t driveSpeed_ = 1000;
 	static constexpr int32_t getZeroPointSpeed = 100;
 
+	static constexpr bool downDirectionIsTrue = true;
 	LED<ledColor::Red> PositionOK;
+	PositionPID moveAngleMotor_;
 
 	const PositionPID_initStructType initStruct_
 	{
@@ -78,6 +81,8 @@ private:
 	void getZeroPoint_();
 	void zeroPointIntrrupt_();
 	void moveAngle_Update();
+
+	void setMotorPidSpeed_safety(int32_t setSpeed);
 };
 
 #endif /* MYHEADERS_MOVE_ANGLE_HPP_ */

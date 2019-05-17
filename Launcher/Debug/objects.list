@@ -54,6 +54,7 @@
 "src/mySources/move_angle.o"
 "src/mySources/position_pid.o"
 "src/mySources/rotary_encoder.o"
+"src/mySources/sequence.o"
 "src/mySources/speed_pid.o"
 "src/mySources/uart.o"
 "startup/startup_stm32.o"

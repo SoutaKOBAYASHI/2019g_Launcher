@@ -21,7 +21,7 @@
 
 
 
-class Launcher : public Speed_pid
+class Launcher
 {
 public:
 	enum class launcherSequence : uint8_t
@@ -31,19 +31,19 @@ public:
 		returnZeroPoint
 	};
 
-	Launcher() : Speed_pid(encoderName::RotEnc1, motorPPR_, useGain_, 0.001)
+	Launcher() : launchMotorPID(encoderName::RotEnc1, motorPPR_, useGain_, 0.001)
 	{
 
-		Speed_pid::setNewStateGate(MotorControl::gateEnableState::Enable);
-		Speed_pid::setCount((uint32_t)defaultEncoderCount);
+		launchMotorPID.setNewStateGate(MotorControl::gateEnableState::Enable);
+		launchMotorPID.setCount((uint32_t)defaultEncoderCount);
 
 		EXTI0Intrrupt::init(0);
 
 		EXTI0Intrrupt::additionCallFunction( [&]{ limitSensorIntrrupt(); } );
 
-		Speed_pid::setEnableState(true);
+		launchMotorPID.setEnableState(true);
 	}
-	virtual void update() override
+	virtual void update()
 	{
 		/*
 		std::string sendStr = std::to_string(Speed_pid::readPositionCount<uint32_t>()) + '\n';
@@ -51,7 +51,7 @@ public:
 		sendStr.clear();
 		*/
 		launcherUpdate();
-		Speed_pid::update();
+		launchMotorPID.update();
 
 	}
 	const bool& isGotZeroPoint = isGotZeroPoint_;
@@ -61,6 +61,8 @@ public:
 
 	virtual ~Launcher(){ }
 private:
+	Speed_pid launchMotorPID;
+
 	void throwingShagai();
 
 	launcherSequence nowSequence_ = launcherSequence::returnZeroPoint;

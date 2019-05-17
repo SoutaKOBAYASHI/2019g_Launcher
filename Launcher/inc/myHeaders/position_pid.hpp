@@ -49,8 +49,17 @@ public:
 
 	virtual void update() override
 	{
-		positionPID_update();
-		MotorDriver::update();
+		static uint8_t count = 0;
+		if(count >= 10)
+		{
+			positionPID_update();
+			MotorDriver::update();
+			count = 0;
+		}
+		else
+		{
+			count++;
+		}
 	}
 
 	inline void setPositionCount(int32_t setCount)
