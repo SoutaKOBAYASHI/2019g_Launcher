@@ -171,7 +171,7 @@ void Sequence::sequenceUpdate_()
 void Sequence::sendConpliteCmd_(const compliteCmdFormat sendCmd)
 {
 	const std::array<uint8_t, 2> sendData = { OwnAddress, (uint8_t)sendCmd };
-	ControlAreaNetwork::SendData(sendData, MainBoardAddress);
+	ControlAreaNetwork::sendData(sendData, MainBoardAddress);
 }
 void Sequence::orderReceive_(const CanRxMsg& receiveData)
 {

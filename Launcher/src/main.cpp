@@ -29,6 +29,7 @@ void a(const CanRxMsg& receiveRx)
 {
 	if(receiveRx.Data[0] == 0x00 && receiveRx.Data[1] == 0x27)
 	{
+		/*
 		const int16_t x_value = (uint16_t)receiveRx.Data[3] << 8 | (uint16_t)receiveRx.Data[2];
 		const int16_t y_value = (uint16_t)receiveRx.Data[5] << 8 | (uint16_t)receiveRx.Data[4];
 
@@ -47,7 +48,7 @@ void a(const CanRxMsg& receiveRx)
 		uart_->TransmitData(' ');
 		uart_->TransmitData(sendChar_y, 10);
 		uart_->TransmitData('\n');
-
+		*/
 	}
 }
 
@@ -57,7 +58,7 @@ int main(void)
 {
 	clockInit();
 	systick::init();
-	ControlAreaNetwork::Config(OwnAddress);
+	ControlAreaNetwork::config(OwnAddress);
 
 	CAN_intrrupt::additionCallFunction(a);
 	//IO_sigPins<ioName::sig1, ioState::input> input1;
@@ -69,10 +70,9 @@ int main(void)
 
 	Sequence sequence;
 
-	const std::string a = "HelloWorld!\n";
 	while(true)
 	{
-		uartSendString(a);
+
 	}
 	return 0;
 }

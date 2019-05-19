@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="リソース名 &apos;Launcher/src/main.c&apos; を &apos;main.cpp&apos; に変更します" description="リソース &apos;main.c&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main.c" name="main.cpp" stamp="1550898844326" updateReferences="true"/>&#x0A;<refactoring comment="リソース名 &apos;Launcher/inc/myHeaders/Motor.h&apos; を &apos;motor.h&apos; に変更します" description="リソース &apos;Motor.h&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/myHeaders/Motor.h" name="motor.h" stamp="1550902710577" updateReferences="true"/>
-</session>
