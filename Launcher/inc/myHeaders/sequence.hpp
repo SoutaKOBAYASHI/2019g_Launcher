@@ -19,6 +19,7 @@
 #include <electric_valve.hpp>
 #include <led.hpp>
 #include <board_io.hpp>
+#include <uart.hpp>
 
 constexpr uint8_t MainBoardAddress	= 0x00;
 constexpr uint8_t OwnAddress		= 0x01;
@@ -28,33 +29,24 @@ constexpr uint8_t CmdIncrementSequence = 0x25;
 class Sequence
 {
 public:
-	Sequence()
+	Sequence() : uart_(UART::name::uart1)
 	{
 		systick::additionCallFunction( [&]{ update(); } );
-		CAN_intrrupt::additionCallFunction( [&](const CanRxMsg& receiveData){ orderReceive_(receiveData); } );
+		uart1_intrrupt::additionCallFunction( [&](const uint8_t data){receiveParams(data);} );
+		//CAN_intrrupt::additionCallFunction( [&](const CanRxMsg& receiveData){ orderReceive_(receiveData); } );
 	}
 	virtual ~Sequence(){}
 private:
 	MoveAngle moveAngleMechanism_;
 	Launcher launcherMechanism_;
+	UART uart_;
 
 	enum class sequenceName
 	{
 		start,
 
-		setGettingAngle,
-		waitSettingGetttingAngle,
-
-		fallArm,
-
 		getShagai,
 		waitGettingShagai,
-
-		liftArm,
-		waitLiftingArm,
-
-		shortenArm,
-		waitShortenningArm,
 
 		setThrowingAngle,
 		waitSettingThrowingAngle,
@@ -86,6 +78,8 @@ private:
 	sequenceName nowSequence_ = sequenceName::start;
 	receiveOrderFormat receiveCmd_ = receiveOrderFormat::start;
 
+	int32_t setLauncherAngleValue_ = -1000;
+
 	EV eleValve;
 	LED<ledColor::Red> emergencyStateLED;
 
@@ -103,7 +97,9 @@ private:
 	}
 	void sequenceUpdate_();
 	void sendConpliteCmd_(const compliteCmdFormat sendCmd);
-	void orderReceive_(const CanRxMsg& receiveData);
+
+	static constexpr uint8_t startByte_ = 0xAA;
+	void receiveParams(const uint8_t data);
 };
 
 

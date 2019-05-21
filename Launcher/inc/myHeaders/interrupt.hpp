@@ -38,4 +38,8 @@ namespace CAN_intrrupt
 	void init(const uint8_t IRQ_priority);
 	void additionCallFunction(const std::function<void(const CanRxMsg&)>&& addFunc);
 }
+namespace uart1_intrrupt
+{
+	void additionCallFunction(const std::function<void(const uint8_t)>&& addFunc);
+}
 #endif /* MYHEADERS_INTERRUPT_HPP_ */

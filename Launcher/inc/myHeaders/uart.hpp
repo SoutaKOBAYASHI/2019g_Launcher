@@ -39,10 +39,12 @@ public:
 
 	inline void TransmitData(const std::string& sendString) { TransmitData((uint8_t*)sendString.c_str(), sendString.size()); }
 	template<size_t S>
-	inline void TransmitData(const std::array<uint8_t,S>& sendDataArray){ for(auto i : sendDataArray)TransmitData(sendDataArray.at(i)); }
+	inline void TransmitData(const std::array<uint8_t,S>& sendDataArray){ for(auto i : sendDataArray)TransmitData((uint8_t)i); }
 	template<size_t S>
 	inline void TransmitData(const std::array<char,S>& sendDataArray){ for(auto i : sendDataArray)TransmitData((uint8_t)i); }
-	inline void TransmitData(const std::vector<uint8_t>& sendVector){ for(auto i : sendVector)TransmitData(sendVector.at(i)); }
+	inline void TransmitData(const std::vector<uint8_t>& sendVector){ for(auto i : sendVector)TransmitData((uint8_t)i); }
+
+	inline uint8_t receiveData(){ return (uint8_t)USART_ReceiveData(useUartName_); }
 
 private:
 	void pinsInit_usart1();
@@ -51,7 +53,5 @@ private:
 	static constexpr uint32_t defaultBaudrate_ = 9600;
 	USART_TypeDef* const useUartName_;
 };
-
-extern std::function<void(const std::string&)> uartSendString;
 
 #endif /* MYHEADERS_UART_HPP_ */

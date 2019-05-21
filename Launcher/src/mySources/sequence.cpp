@@ -29,44 +29,12 @@ void Sequence::sequenceUpdate_()
 		switch(nowSequence_)
 		{
 		case sequenceName::start :
-			moveAngleMechanism_.setTargetMovePosition(moveAngleMechanism_.movePositions::upPosition);
+			moveAngleMechanism_.setTargetMovePosition(moveAngleMechanism_.movePositions::throwingPosition);
 			launcherMechanism_.setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-			eleValve.setNewState(EV::state::Reset, expendArmValve, fallArmValve, holdShagaiValve);
+			eleValve.setNewState(EV::state::Reset, expendArmValve, fallArmValve);
+			eleValve.setNewState(EV::state::Set, holdShagaiValve);
 			//eleValve.setNewState(EV::state::Set, holdShagaiValve);
 			if(receiveCmd_ != receiveOrderFormat::start && launcherMechanism_.isGotZeroPoint && moveAngleMechanism_.isGotZeroPoint)
-			{
-				nowSequence_ = sequenceName::setGettingAngle;
-			}
-			break;
-
-		case sequenceName::setGettingAngle :
-			moveAngleMechanism_.setTargetMovePosition(moveAngleMechanism_.movePositions::downPosition);
-			launcherMechanism_.setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-
-			if(moveAngleMechanism_.readNowAngleCount() > ExpandArmAngle)
-			{
-				eleValve.setNewState(EV::state::Set, expendArmValve);
-				eleValve.setNewState(EV::state::Set, holdShagaiValve);
-				if(expandArmSensor.readNowState())eleValve.setNewState(EV::state::Set, fallArmValve);
-			}
-
-			if(moveAngleMechanism_.isAnglePID_OK() && expandArmSensor.readNowState())
-			{
-				waitCount = 200;
-				nowSequence_ = sequenceName::waitSettingGetttingAngle;
-			}
-			break;
-
-
-		case sequenceName::waitSettingGetttingAngle :
-
-			if(!waiting())nowSequence_ = sequenceName::fallArm;
-			break;
-
-		case sequenceName::fallArm:
-			eleValve.setNewState(EV::state::Set, fallArmValve);
-			sendConpliteCmd_(compliteCmdFormat::standbyGettingShagai);
-			if(receiveCmd_ == receiveOrderFormat::getShagai || receiveCmd_ == receiveOrderFormat::throwShagai)
 			{
 				nowSequence_ = sequenceName::getShagai;
 			}
@@ -79,31 +47,11 @@ void Sequence::sequenceUpdate_()
 			break;
 
 		case sequenceName::waitGettingShagai:
-			if(!waiting())nowSequence_ = sequenceName::liftArm;
-			break;
-
-		case sequenceName::liftArm:
-			eleValve.setNewState(EV::state::Reset, fallArmValve);
-			waitCount = 1000;
-			nowSequence_ = sequenceName::waitLiftingArm;
-			break;
-
-		case sequenceName::waitLiftingArm:
-			if(!waiting())nowSequence_ = sequenceName::shortenArm;
-			break;
-
-		case sequenceName::shortenArm:
-			eleValve.setNewState(EV::state::Reset, expendArmValve);
-			waitCount = 1000;
-			nowSequence_ = sequenceName::waitShortenningArm;
-			break;
-
-		case sequenceName::waitShortenningArm:
 			if(!waiting())nowSequence_ = sequenceName::setThrowingAngle;
 			break;
 
 		case sequenceName::setThrowingAngle:
-			moveAngleMechanism_.setTargetMovePosition(moveAngleMechanism_.movePositions::throwingPosition);
+			moveAngleMechanism_.setTargetMovePosition_v(setLauncherAngleValue_);
 			if(moveAngleMechanism_.isAnglePID_OK())
 			{
 				waitCount = 200;
@@ -152,7 +100,7 @@ void Sequence::sequenceUpdate_()
 			break;
 
 		case sequenceName::waitCommand:
-			if(receiveCmd_ != receiveOrderFormat::start)nowSequence_ = sequenceName::setGettingAngle;
+			if(receiveCmd_ != receiveOrderFormat::start)nowSequence_ = sequenceName::getShagai;
 			break;
 
 		}
@@ -163,29 +111,77 @@ void Sequence::sendConpliteCmd_(const compliteCmdFormat sendCmd)
 	const std::array<uint8_t, 2> sendData = { OwnAddress, (uint8_t)sendCmd };
 	ControlAreaNetwork::sendData(sendData, MainBoardAddress);
 }
-void Sequence::orderReceive_(const CanRxMsg& receiveData)
+void Sequence::receiveParams(const uint8_t data)
 {
-	//if(receiveData.Data[0] == MainBoardAddress) receiveCmd_ = (receiveOrderFormat)receiveData.Data[1];
-	if(receiveData.Data[0] == MainBoardAddress && receiveData.Data[1] == CmdIncrementSequence)
+	static uint8_t receiveStartByte = 0;
+	static std::array<uint8_t, 8> receiveDataArr = {};
+	static uint8_t receiveCheckSum = 0;
+	uint8_t checkSum = 0;
+	static uint8_t receiveCount = 0;
+
+	int32_t setSpeed = 0;
+	int32_t setAngle = 0;
+
+	auto receiveDataCheck = [](const int32_t speed, const int32_t angle)
+			{return speed < Launcher::throwingMinSpeed && Launcher::throwingMaxSpeed < speed && angle < (int32_t)MoveAngle::movePositions::downPosition && (int32_t)MoveAngle::movePositions::upPosition < angle;};
+
+	switch(receiveCount)
 	{
-		switch(receiveCmd_)
+	case 0:
+		receiveStartByte = data;
+		break;
+
+	case 9:
+		receiveCheckSum = data;
+		break;
+
+	default:
+		receiveDataArr[receiveCount - 1] = data;
+		break;
+	}
+
+	if(receiveStartByte == startByte_)
+	{
+		if(receiveCount == 9)
 		{
-		case receiveOrderFormat::start:
-			receiveCmd_ = receiveOrderFormat::fallArm;
-			break;
+			checkSum = 0;
+			for(auto i : receiveDataArr)checkSum += i;
+			if(checkSum == receiveCheckSum)
+			{
+				setSpeed =
+						(int32_t)receiveDataArr[0] << 24|
+						(int32_t)receiveDataArr[1] << 16|
+						(int32_t)receiveDataArr[2] << 8 |
+						(int32_t)receiveDataArr[3] ;
+				setAngle =
+						(int32_t)receiveDataArr[4] << 24|
+						(int32_t)receiveDataArr[5] << 16|
+						(int32_t)receiveDataArr[6] << 8 |
+						(int32_t)receiveDataArr[7] ;
 
-		case receiveOrderFormat::fallArm:
-			receiveCmd_ = receiveOrderFormat::getShagai;
-			break;
+				if(nowSequence_ == sequenceName::start || nowSequence_ == sequenceName::waitCommand)
+				{
+					if(receiveDataCheck(setSpeed, setAngle))
+					{
+						launcherMechanism_.setThrowingSpeed((double)setSpeed);
+						setLauncherAngleValue_ = setAngle;
 
-		case receiveOrderFormat::getShagai:
-			receiveCmd_ = receiveOrderFormat::throwShagai;
-			break;
+						receiveCmd_ = receiveOrderFormat::throwShagai;
+					}
+				}
 
-		case receiveOrderFormat::throwShagai:
-			receiveCmd_ = receiveOrderFormat::fallArm;
-			break;
+			}
+
+			receiveCount = 0;
 		}
+		else
+		{
+			receiveCount++;
+		}
+	}
+	else
+	{
+		receiveCount = 0;
 	}
 }
 

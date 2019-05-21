@@ -128,3 +128,18 @@ namespace CAN_intrrupt
 		}
 	}
 }
+
+namespace uart1_intrrupt
+{
+	static std::vector<std::function<void(const uint8_t)>> callsFunctions;
+	void additionCallFunction(const std::function<void(const uint8_t)>&& addFunc){ callsFunctions.push_back(addFunc); }
+
+	extern "C"
+	{
+		void USART1_IRQHandler()
+		{
+			uint8_t receiveByte = USART_ReceiveData(USART1);
+			for(auto i : callsFunctions)i(receiveByte);
+		}
+	}
+}

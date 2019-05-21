@@ -50,6 +50,8 @@ public:
 
 	inline void setTargetMovePosition(const movePositions setPosition)
 			{ moveAngleMotor_.setTargetPosition((int32_t)setPosition); }
+	inline void setTargetMovePosition_v(const int32_t setPosition)
+			{ moveAngleMotor_.setTargetPosition(setPosition); }
 
 	virtual ~MoveAngle(){}
 private:

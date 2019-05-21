@@ -56,6 +56,16 @@ public:
 	}
 	const bool& isGotZeroPoint = isGotZeroPoint_;
 
+	static constexpr double throwingMaxSpeed = -10000;
+	static constexpr double throwingMinSpeed = 0;
+
+	inline void setThrowingSpeed(const double setSpeed)
+	{
+		if(setSpeed > throwingMaxSpeed && throwingMinSpeed > setSpeed)
+		{
+			throwing_motorDriveSpeed_ = setSpeed;
+		}
+	}
 	inline void setLauncherSequence(const launcherSequence setSequence){ nowSequence_ = setSequence; }
 	const launcherSequence& nowSequence = nowSequence_;
 
@@ -75,7 +85,7 @@ private:
 
 	/*members to get zero point*/
 	static constexpr double getZeroPoint_motorDriveSpeed_ = -100;
-	static constexpr double throwing_motorDriveSpeed_ = -5700;
+	double throwing_motorDriveSpeed_ = -5700; // 0 ~ -7000
 	static constexpr int32_t brakeDuty = -40;
 	bool isGotZeroPoint_ = false;
 
