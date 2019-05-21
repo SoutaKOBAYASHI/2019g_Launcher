@@ -27,7 +27,7 @@ public:
 	enum class movePositions : int32_t
 	{
 		downPosition		= -1000,
-		throwingPosition	= -130000,
+		throwingPosition	= -108733,
 		upPosition			= -1000000
 	};
 	MoveAngle() : moveAngleMotor_(initStruct_)
@@ -58,7 +58,6 @@ private:
 	static constexpr int32_t getZeroPointSpeed = 100;
 
 	static constexpr bool downDirectionIsTrue = true;
-	LED<ledColor::Red> PositionOK;
 
 	const PositionPID_initStructType initStruct_
 	{
