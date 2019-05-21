@@ -42,7 +42,15 @@ void Sequence::sequenceUpdate_()
 		case sequenceName::setGettingAngle :
 			moveAngleMechanism_.setTargetMovePosition(moveAngleMechanism_.movePositions::downPosition);
 			launcherMechanism_.setLauncherSequence(Launcher::launcherSequence::returnZeroPoint);
-			if(moveAngleMechanism_.isAnglePID_OK())
+
+			if(moveAngleMechanism_.readNowAngleCount() > ExpandArmAngle)
+			{
+				eleValve.setNewState(EV::state::Set, expendArmValve);
+				eleValve.setNewState(EV::state::Set, holdShagaiValve);
+				if(expandArmSensor.readNowState())eleValve.setNewState(EV::state::Set, fallArmValve);
+			}
+
+			if(moveAngleMechanism_.isAnglePID_OK() && expandArmSensor.readNowState())
 			{
 				waitCount = 200;
 				nowSequence_ = sequenceName::waitSettingGetttingAngle;
@@ -51,34 +59,16 @@ void Sequence::sequenceUpdate_()
 
 
 		case sequenceName::waitSettingGetttingAngle :
-			if(!waiting())nowSequence_ = sequenceName::expendArm;
-			break;
 
-		case sequenceName::expendArm:
-			eleValve.setNewState(EV::state::Set, expendArmValve);
-			eleValve.setNewState(EV::state::Set, holdShagaiValve);
-			waitCount = 1000;
-			nowSequence_ = sequenceName::waitExpendingArm;
-			break;
-
-		case sequenceName::waitExpendingArm:
 			if(!waiting())nowSequence_ = sequenceName::fallArm;
 			break;
 
 		case sequenceName::fallArm:
 			eleValve.setNewState(EV::state::Set, fallArmValve);
-			waitCount = 1000;
-			nowSequence_ = sequenceName::waitFallingArm;
-			break;
-
-		case sequenceName::waitFallingArm:
-			if(!waiting())
+			sendConpliteCmd_(compliteCmdFormat::standbyGettingShagai);
+			if(receiveCmd_ == receiveOrderFormat::getShagai || receiveCmd_ == receiveOrderFormat::throwShagai)
 			{
-				sendConpliteCmd_(compliteCmdFormat::standbyGettingShagai);
-				if(receiveCmd_ == receiveOrderFormat::getShagai || receiveCmd_ == receiveOrderFormat::throwShagai)
-				{
-					nowSequence_ = sequenceName::getShagai;
-				}
+				nowSequence_ = sequenceName::getShagai;
 			}
 			break;
 
@@ -131,7 +121,7 @@ void Sequence::sequenceUpdate_()
 
 		case sequenceName::openArm:
 			eleValve.setNewState(EV::state::Set, holdShagaiValve);
-			waitCount = 500;
+			waitCount = 550;
 			nowSequence_ = sequenceName::waitOpennningArm;
 			break;
 
@@ -154,7 +144,7 @@ void Sequence::sequenceUpdate_()
 		case sequenceName::waitThrowingShagai:
 			if(!waiting())
 			{
-				eleValve.setNewState(EV::state::Reset, holdShagaiValve);
+				//eleValve.setNewState(EV::state::Reset, holdShagaiValve);
 				sendConpliteCmd_(compliteCmdFormat::throwingComplite);
 				nowSequence_ = sequenceName::waitCommand;
 				receiveCmd_ = receiveOrderFormat::start;

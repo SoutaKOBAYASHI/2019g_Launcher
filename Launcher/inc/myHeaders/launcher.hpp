@@ -75,7 +75,7 @@ private:
 
 	/*members to get zero point*/
 	static constexpr double getZeroPoint_motorDriveSpeed_ = -100;
-	static constexpr double throwing_motorDriveSpeed_ = -6000;
+	static constexpr double throwing_motorDriveSpeed_ = -5700;
 	static constexpr int32_t brakeDuty = -40;
 	bool isGotZeroPoint_ = false;
 

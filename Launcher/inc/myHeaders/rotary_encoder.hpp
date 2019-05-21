@@ -46,11 +46,11 @@ public:
 	}
 
 	template<typename T>
-	std::enable_if_t<std::is_signed<T>::value && !std::is_floating_point<T>::value, T> readCount() const
+	std::enable_if_t<std::is_signed_v<T> && !std::is_floating_point_v<T>, T> readCount() const
 	{
-		const T countValue = (T)useTimer_->CNT;
+		const uint32_t countValue = (uint32_t)useTimer_->CNT;
 		std::make_unsigned_t<T> returnValue = 0;
-	    if(countValue > (uint16_t)(useTimer_->ARR/2))
+	    if(countValue > ((uint32_t)(useTimer_->ARR/2)))
 		{
 	    	/*Complement representation*/
 			returnValue = returnValue - 1;	//returnValue is 0x~FFFF.

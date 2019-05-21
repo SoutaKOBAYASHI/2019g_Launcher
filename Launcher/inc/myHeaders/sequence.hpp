@@ -18,6 +18,7 @@
 #include <launcher.hpp>
 #include <electric_valve.hpp>
 #include <led.hpp>
+#include <board_io.hpp>
 
 constexpr uint8_t MainBoardAddress	= 0x00;
 constexpr uint8_t OwnAddress		= 0x01;
@@ -44,11 +45,7 @@ private:
 		setGettingAngle,
 		waitSettingGetttingAngle,
 
-		expendArm,
-		waitExpendingArm,
-
 		fallArm,
-		waitFallingArm,
 
 		getShagai,
 		waitGettingShagai,
@@ -84,6 +81,8 @@ private:
 		throwingComplite = 0x03
 	};
 
+	static constexpr int32_t ExpandArmAngle = -500000;
+
 	sequenceName nowSequence_ = sequenceName::start;
 	receiveOrderFormat receiveCmd_ = receiveOrderFormat::start;
 
@@ -93,6 +92,8 @@ private:
 	static constexpr EV::name expendArmValve = EV::name::EV0;
 	static constexpr EV::name fallArmValve = EV::name::EV1;
 	static constexpr EV::name holdShagaiValve = EV::name::EV2;
+
+	IO_sigPins<ioName::sig4, ioState::input> expandArmSensor;
 
 	virtual void update() final
 	{

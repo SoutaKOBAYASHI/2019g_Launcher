@@ -22,11 +22,12 @@
 
 class MoveAngle
 {
+private: PositionPID moveAngleMotor_;
 public:
 	enum class movePositions : int32_t
 	{
 		downPosition		= -1000,
-		throwingPosition	= -120000,
+		throwingPosition	= -130000,
 		upPosition			= -1000000
 	};
 	MoveAngle() : moveAngleMotor_(initStruct_)
@@ -36,6 +37,8 @@ public:
 	}
 
 	const bool& isGotZeroPoint = isGotZeroPoint_;
+
+	inline int32_t readNowAngleCount(){ return moveAngleMotor_.readPositionCount<int32_t>(); }
 
 	inline bool isAnglePID_OK(){ return moveAngleMotor_.errorCheck(); }
 
@@ -56,7 +59,6 @@ private:
 
 	static constexpr bool downDirectionIsTrue = true;
 	LED<ledColor::Red> PositionOK;
-	PositionPID moveAngleMotor_;
 
 	const PositionPID_initStructType initStruct_
 	{

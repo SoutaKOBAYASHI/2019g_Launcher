@@ -16,6 +16,8 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="PreferencesImportWizard">
+	</section>
 	<section name="ImportExportAction">
 	</section>
 </section>
