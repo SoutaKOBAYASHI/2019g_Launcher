@@ -9,6 +9,8 @@
 
 #include <array>
 
+static double nowSpeed = 0;
+
 void Launcher::throwingShagai()
 {
 	launchSign.setNewState(state::OFF);
@@ -65,6 +67,7 @@ void Launcher::launcherUpdate()
 {
 	getZeroPoint();
 
+	nowSpeed = launchMotorPID.nowSpeed;
 	//std::string str = std::to_string(Speed_pid::readPositionCount<uint32_t>()) + '\n';
 	//uartSendString(str);
 

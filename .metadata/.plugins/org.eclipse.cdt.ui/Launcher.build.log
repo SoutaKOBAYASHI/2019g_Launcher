@@ -1,4 +1,4 @@
-22:29:17 **** Incremental Build of configuration Debug for project Launcher ****
+11:29:40 **** Incremental Build of configuration Debug for project Launcher ****
 make -j8 all 
 Building file: ../src/mySources/launcher.cpp
 Building file: ../src/mySources/sequence.cpp
@@ -7,8 +7,8 @@ Invoking: MCU G++ Compiler
 Invoking: MCU G++ Compiler
 Invoking: MCU G++ Compiler
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
@@ -65,17 +65,17 @@ C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CM
    register uint32_t result;
                      ^~~~~~
 Finished building: ../src/mySources/launcher.cpp
- 
 Finished building: ../src/mySources/sequence.cpp
- 
 Finished building: ../src/main.cpp
+ 
+ 
  
 Building target: Launcher.elf
 Invoking: MCU G++ Linker
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Xlinker -print-memory-usage -T"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "Launcher.elf" @"objects.list"   -lm
 Memory region         Used Size  Region Size  %age Used
-             RAM:        3888 B       128 KB      2.97%
-             ROM:      121628 B         1 MB     11.60%
+             RAM:        3896 B       128 KB      2.97%
+             ROM:      121692 B         1 MB     11.61%
 Finished building target: Launcher.elf
  
 make --no-print-directory post-build
@@ -83,8 +83,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Launcher.elf" "Launcher.bin"
 arm-none-eabi-size "Launcher.elf"
    text	   data	    bss	    dec	    hex	filename
- 119072	   2532	   1384	 122988	  1e06c	Launcher.elf
+ 119136	   2532	   1392	 123060	  1e0b4	Launcher.elf
  
 
-22:29:23 Build Finished (took 5s.618ms)
+11:29:47 Build Finished (took 7s.352ms)
 
