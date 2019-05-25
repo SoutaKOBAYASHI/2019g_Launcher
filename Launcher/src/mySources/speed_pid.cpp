@@ -32,7 +32,7 @@ void Speed_pid::speedPID_update()
 
 	if(isSpeedPID_Enable)
 	{
-		MotorControl::setSpeed((int32_t)setSpeed, MotorControl::driveMode::SMB);
+		MotorControl::setSpeed(std::abs(setSpeed) > 90.0 ?90 :(int32_t)setSpeed, MotorControl::driveMode::SMB);
 		dev_before = dev_now;
 	}
 	else
