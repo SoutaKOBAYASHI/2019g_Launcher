@@ -13277,3 +13277,414 @@ arm-none-eabi-size "Launcher.elf"
    text	   data	    bss	    dec	    hex	filename
  119136	   2532	   1392	 123060	  1e0b4	Launcher.elf
  
+16:35:57 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/electric_valve.cpp
+Building file: ../src/mySources/emergency.cpp
+Building file: ../src/mySources/intrrupt.cpp
+Building file: ../src/mySources/launcher.cpp
+Building file: ../src/mySources/motor.cpp
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/rotary_encoder.cpp
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/emergency.d" -MT"src/mySources/emergency.o" -o "src/mySources/emergency.o" "../src/mySources/emergency.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/electric_valve.d" -MT"src/mySources/electric_valve.o" -o "src/mySources/electric_valve.o" "../src/mySources/electric_valve.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/intrrupt.d" -MT"src/mySources/intrrupt.o" -o "src/mySources/intrrupt.o" "../src/mySources/intrrupt.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/motor.d" -MT"src/mySources/motor.o" -o "src/mySources/motor.o" "../src/mySources/motor.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/rotary_encoder.d" -MT"src/mySources/rotary_encoder.o" -o "src/mySources/rotary_encoder.o" "../src/mySources/rotary_encoder.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp:11,
+                 from ../src/mySources/electric_valve.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:11,
+                 from ../src/mySources/emergency.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from ../src/mySources/motor.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from ../src/mySources/rotary_encoder.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp:11,
+                 from ../src/mySources/electric_valve.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:11,
+                 from ../src/mySources/emergency.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from ../src/mySources/rotary_encoder.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:13,
+                 from ../src/mySources/launcher.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from ../src/mySources/motor.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Finished building: ../src/mySources/emergency.cpp
+Finished building: ../src/mySources/electric_valve.cpp
+ 
+Finished building: ../src/mySources/rotary_encoder.cpp
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/mySources/speed_pid.cpp
+ 
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../src/mySources/uart.cpp
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:13,
+                 from ../src/mySources/launcher.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU G++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/speed_pid.d" -MT"src/mySources/speed_pid.o" -o "src/mySources/speed_pid.o" "../src/mySources/speed_pid.cpp"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/uart.d" -MT"src/mySources/uart.o" -o "src/mySources/uart.o" "../src/mySources/uart.cpp"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:11,
+                 from ../src/mySources/speed_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\map:61,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:11,
+                 from ../src/mySources/position_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_map.h: In member function 'std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = PositionPID::positionPID_update()::termName; _Tp = double; _Compare = std::less<PositionPID::positionPID_update()::termName>; _Alloc = std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_map.h:518:8: note: parameter passing for argument of type 'std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const PositionPID::positionPID_update()::termName, double> >'} changed in GCC 7.1
+    __i = _M_t._M_emplace_hint_unique(__i, std::piecewise_construct,
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\map:60,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:11,
+                 from ../src/mySources/position_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_II, _II) [with _InputIterator = const std::pair<const PositionPID::positionPID_update()::termName, double>*; _Key = PositionPID::positionPID_update()::termName; _Val = std::pair<const PositionPID::positionPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >; _Compare = std::less<PositionPID::positionPID_update()::termName>; _Alloc = std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2468:4: note: parameter passing for argument of type 'std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const PositionPID::positionPID_update()::termName, double> >'} changed in GCC 7.1
+    _M_insert_unique_(end(), *__first, __an);
+    ^~~~~~~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:15,
+                 from ../src/mySources/uart.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<PositionPID::positionPID_update()::termName&&>, std::tuple<>}; _Key = PositionPID::positionPID_update()::termName; _Val = std::pair<const PositionPID::positionPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >; _Compare = std::less<PositionPID::positionPID_update()::termName>; _Alloc = std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2411:7: note: parameter passing for argument of type 'std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const PositionPID::positionPID_update()::termName, double> >'} changed in GCC 7.1
+       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique_(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Arg&&, _NodeGen&) [with _Arg = const std::pair<const PositionPID::positionPID_update()::termName, double>&; _NodeGen = std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::_Alloc_node; _Key = PositionPID::positionPID_update()::termName; _Val = std::pair<const PositionPID::positionPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >; _Compare = std::less<PositionPID::positionPID_update()::termName>; _Alloc = std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2207:7: note: parameter passing for argument of type 'std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const PositionPID::positionPID_update()::termName, double> >'} changed in GCC 7.1
+       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = PositionPID::positionPID_update()::termName; _Val = std::pair<const PositionPID::positionPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >; _Compare = std::less<PositionPID::positionPID_update()::termName>; _Alloc = std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2146:5: note: parameter passing for argument of type 'std::_Rb_tree<PositionPID::positionPID_update()::termName, std::pair<const PositionPID::positionPID_update()::termName, double>, std::_Select1st<std::pair<const PositionPID::positionPID_update()::termName, double> >, std::less<PositionPID::positionPID_update()::termName>, std::allocator<std::pair<const PositionPID::positionPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const PositionPID::positionPID_update()::termName, double> >'} changed in GCC 7.1
+     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:11,
+                 from ../src/mySources/speed_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Finished building: ../src/mySources/launcher.cpp
+Finished building: ../src/mySources/move_angle.cpp
+ 
+ 
+Building file: ../src/main.cpp
+Building file: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/can.cpp
+Invoking: MCU G++ Compiler
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:15,
+                 from ../src/mySources/uart.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/mySources/motor.cpp
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/can.d" -MT"Libraries/src/can.o" -o "Libraries/src/can.o" "C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/can.cpp"
+ 
+Building file: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp
+Invoking: MCU G++ Compiler
+Finished building: ../src/mySources/intrrupt.cpp
+Finished building: ../src/mySources/position_pid.cpp
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+ 
+ 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/motor_driver.d" -MT"Libraries/src/motor_driver.o" -o "Libraries/src/motor_driver.o" "C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp"
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/can.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\map:61,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:15,
+                 from ../src/mySources/speed_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_map.h: In member function 'std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = Speed_pid::speedPID_update()::termName; _Tp = double; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_map.h:518:8: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+    __i = _M_t._M_emplace_hint_unique(__i, std::piecewise_construct,
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\map:60,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:15,
+                 from ../src/mySources/speed_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique(_II, _II) [with _InputIterator = const std::pair<const Speed_pid::speedPID_update()::termName, double>*; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2468:4: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+    _M_insert_unique_(end(), *__first, __an);
+    ^~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<Speed_pid::speedPID_update()::termName&&>, std::tuple<>}; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2411:7: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique_(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Arg&&, _NodeGen&) [with _Arg = const std::pair<const Speed_pid::speedPID_update()::termName, double>&; _NodeGen = std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::_Alloc_node; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2207:7: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h: In member function 'std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\8.2.1\bits\stl_tree.h:2146:5: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
+Finished building: ../src/mySources/uart.cpp
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/can.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Finished building: ../src/mySources/sequence.cpp
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/can.hpp:24,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+Finished building: ../src/mySources/speed_pid.cpp
+ 
+Finished building: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/can.cpp
+ 
+Finished building: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp
+ 
+Finished building: ../src/main.cpp
+ 
+Building target: Launcher.elf
+Invoking: MCU G++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Xlinker -print-memory-usage -T"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "Launcher.elf" @"objects.list"   -lm
+Memory region         Used Size  Region Size  %age Used
+             RAM:        3896 B       128 KB      2.97%
+             ROM:      121692 B         1 MB     11.61%
+Finished building target: Launcher.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Launcher.elf" "Launcher.bin"
+arm-none-eabi-size "Launcher.elf"
+   text	   data	    bss	    dec	    hex	filename
+ 119136	   2532	   1392	 123060	  1e0b4	Launcher.elf
+ 
