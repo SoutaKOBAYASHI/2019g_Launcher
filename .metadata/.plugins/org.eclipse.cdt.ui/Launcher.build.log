@@ -1,23 +1,17 @@
-11:29:40 **** Incremental Build of configuration Debug for project Launcher ****
+13:59:52 **** Incremental Build of configuration Debug for project Launcher ****
 make -j8 all 
+Building file: ../src/mySources/intrrupt.cpp
 Building file: ../src/mySources/launcher.cpp
-Building file: ../src/mySources/sequence.cpp
 Building file: ../src/main.cpp
 Invoking: MCU G++ Compiler
 Invoking: MCU G++ Compiler
 Invoking: MCU G++ Compiler
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/intrrupt.d" -MT"src/mySources/intrrupt.o" -o "src/mySources/intrrupt.o" "../src/mySources/intrrupt.cpp"
 C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
-                 from ../src/mySources/sequence.cpp:8:
-C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
-   #define STM32F40_41xxx
- 
-<command-line>: note: this is the location of the previous definition
 In file included from ../src/main.cpp:18:
 C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
    #define STM32F40_41xxx
@@ -29,18 +23,12 @@ C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CM
    #define STM32F40_41xxx
  
 <command-line>: note: this is the location of the previous definition
-In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
-                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
-                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
-                 from ../src/mySources/sequence.cpp:8:
-C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
-C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
-   register uint32_t result;
-                     ^~~~~~
-C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
-C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
-   register uint32_t result;
-                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+   #define STM32F40_41xxx
+ 
+<command-line>: note: this is the location of the previous definition
 In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
                  from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
                  from ../src/main.cpp:18:
@@ -64,11 +52,23 @@ C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CM
 C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
    register uint32_t result;
                      ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   register uint32_t result;
+                     ^~~~~~
 Finished building: ../src/mySources/launcher.cpp
-Finished building: ../src/mySources/sequence.cpp
+ 
+Finished building: ../src/mySources/intrrupt.cpp
+ 
 Finished building: ../src/main.cpp
- 
- 
  
 Building target: Launcher.elf
 Invoking: MCU G++ Linker
@@ -86,5 +86,5 @@ arm-none-eabi-size "Launcher.elf"
  119136	   2532	   1392	 123060	  1e0b4	Launcher.elf
  
 
-11:29:47 Build Finished (took 7s.352ms)
+13:59:58 Build Finished (took 5s.835ms)
 
