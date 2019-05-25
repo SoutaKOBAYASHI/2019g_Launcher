@@ -67,7 +67,7 @@ private:
 
 	launcherSequence nowSequence_ = launcherSequence::returnZeroPoint;
 
-	static constexpr PIDgain_speed useGain_ = {-0.0001, -0.0001, -0.0};
+	static constexpr PIDgain_speed useGain_ = {-0.035, -0.0008, -0.002};
 	static constexpr uint16_t motorPPR_ = 2048 * 4;
 
 	static constexpr uint32_t defaultEncoderCount = 55000;
