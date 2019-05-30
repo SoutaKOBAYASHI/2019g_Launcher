@@ -27,7 +27,7 @@ public:
 	enum class movePositions : int32_t
 	{
 		downPosition		= -1000,
-		throwingPosition	= -114933,
+		throwingPosition	= -127332,
 		upPosition			= -1000000
 	};
 	MoveAngle() : moveAngleMotor_(initStruct_)
