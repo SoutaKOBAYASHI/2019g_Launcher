@@ -13688,3 +13688,1325 @@ arm-none-eabi-size "Launcher.elf"
    text	   data	    bss	    dec	    hex	filename
  119136	   2532	   1392	 123060	  1e0b4	Launcher.elf
  
+15:00:23 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../startup/startup_stm32.s
+Building file: ../src/mySources/electric_valve.cpp
+Building file: ../src/mySources/emergency.cpp
+Building file: ../src/mySources/launcher.cpp
+Building file: ../src/mySources/intrrupt.cpp
+Invoking: MCU GCC Assembler
+Building file: ../src/mySources/motor.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/move_angle.cpp
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU G++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/electric_valve.d" -MT"src/mySources/electric_valve.o" -o "src/mySources/electric_valve.o" "../src/mySources/electric_valve.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/motor.d" -MT"src/mySources/motor.o" -o "src/mySources/motor.o" "../src/mySources/motor.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/emergency.d" -MT"src/mySources/emergency.o" -o "src/mySources/emergency.o" "../src/mySources/emergency.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/intrrupt.d" -MT"src/mySources/intrrupt.o" -o "src/mySources/intrrupt.o" "../src/mySources/intrrupt.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/launcher.d" -MT"src/mySources/launcher.o" -o "src/mySources/launcher.o" "../src/mySources/launcher.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp:11,
+                 from ../src/mySources/electric_valve.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from ../src/mySources/motor.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:11,
+                 from ../src/mySources/emergency.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/electric_valve.hpp:11,
+                 from ../src/mySources/electric_valve.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/board_io.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/emergencty.hpp:11,
+                 from ../src/mySources/emergency.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15:10: fatal error: control_area_network.hpp: No such file or directory
+   15 | #include "control_area_network.hpp"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:13,
+                 from ../src/mySources/launcher.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15:10: fatal error: control_area_network.hpp: No such file or directory
+   15 | #include "control_area_network.hpp"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from ../src/mySources/motor.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+make: *** [src/mySources/position_pid.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+make: *** Waiting for unfinished jobs....
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+make: *** [src/mySources/move_angle.o] Error 1
+Finished building: ../src/mySources/electric_valve.cpp
+Finished building: ../src/mySources/emergency.cpp
+ 
+Finished building: ../startup/startup_stm32.s
+ 
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/interrupt.hpp:15,
+                 from ../src/mySources/intrrupt.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/launcher.hpp:13,
+                 from ../src/mySources/launcher.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+Finished building: ../src/mySources/motor.cpp
+ 
+Finished building: ../src/mySources/launcher.cpp
+ 
+Finished building: ../src/mySources/intrrupt.cpp
+ 
+15:02:17 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/rotary_encoder.cpp
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/mySources/speed_pid.cpp
+Invoking: MCU G++ Compiler
+Building file: ../src/mySources/uart.cpp
+Building file: ../src/main.cpp
+Building file: ../src/syscalls.c
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/uart.d" -MT"src/mySources/uart.o" -o "src/mySources/uart.o" "../src/mySources/uart.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/speed_pid.d" -MT"src/mySources/speed_pid.o" -o "src/mySources/speed_pid.o" "../src/mySources/speed_pid.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/rotary_encoder.d" -MT"src/mySources/rotary_encoder.o" -o "src/mySources/rotary_encoder.o" "../src/mySources/rotary_encoder.cpp"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:11,
+                 from ../src/mySources/speed_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from ../src/mySources/rotary_encoder.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from ../src/mySources/rotary_encoder.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:15,
+                 from ../src/mySources/uart.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/sequence.o' failed
+make: *** [src/mySources/sequence.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/motor.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:11,
+                 from ../src/mySources/speed_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:21:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [src/main.o] Error 1
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:15,
+                 from ../src/mySources/uart.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+Finished building: ../src/mySources/rotary_encoder.cpp
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+Finished building: ../src/syscalls.c
+ 
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::switchControl_()':
+../src/mySources/move_angle.cpp:23:78: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   23 |   if(isGotZeroPoint && !moveAngleMotor_.isPositionPID_Enable)moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+      |                                                                              ^~~~~~~~
+      |                                                                              setSpeed
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::zeroPointIntrrupt_()':
+../src/mySources/move_angle.cpp:29:18: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   29 |  moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+      |                  ^~~~~~~~
+      |                  setSpeed
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::setMotorPidSpeed_safety(int32_t)':
+../src/mySources/move_angle.cpp:62:53: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   62 |  if(!emergencySwitch.readNowState())moveAngleMotor_.SetSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                                                     ^~~~~~~~
+      |                                                     setSpeed
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/position_pid.cpp: In member function 'void PositionPID::positionPID_update()':
+../src/mySources/position_pid.cpp:44:16: error: 'SetSpeed' is not a member of 'MotorDriver'
+   44 |   MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\map:61,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:15,
+                 from ../src/mySources/speed_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_map.h: In member function 'std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = Speed_pid::speedPID_update()::termName; _Tp = double; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_map.h:518:8: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+  518 |    __i = _M_t._M_emplace_hint_unique(__i, std::piecewise_construct,
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\map:60,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/speed_pid.hpp:15,
+                 from ../src/mySources/speed_pid.cpp:8:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h: In member function 'std::__enable_if_t<std::is_same<_Val, typename std::iterator_traits<_InputIterator>::value_type>::value> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_range_unique(_InputIterator, _InputIterator) [with _InputIterator = const std::pair<const Speed_pid::speedPID_update()::termName, double>*; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h:1113:6: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+ 1113 |      _M_insert_unique_(end(), *__first, __an);
+      |      ^~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<Speed_pid::speedPID_update()::termName&&>, std::tuple<>}; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h:2452:7: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+ 2452 |       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h: In member function 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_insert_unique_(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Arg&&, _NodeGen&) [with _Arg = const std::pair<const Speed_pid::speedPID_update()::termName, double>&; _NodeGen = std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::_Alloc_node; _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h:2248:7: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+ 2248 |       _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h: In member function 'std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = Speed_pid::speedPID_update()::termName; _Val = std::pair<const Speed_pid::speedPID_update()::termName, double>; _KeyOfValue = std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >; _Compare = std::less<Speed_pid::speedPID_update()::termName>; _Alloc = std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> >]':
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\c++\9.2.1\bits\stl_tree.h:2187:5: note: parameter passing for argument of type 'std::_Rb_tree<Speed_pid::speedPID_update()::termName, std::pair<const Speed_pid::speedPID_update()::termName, double>, std::_Select1st<std::pair<const Speed_pid::speedPID_update()::termName, double> >, std::less<Speed_pid::speedPID_update()::termName>, std::allocator<std::pair<const Speed_pid::speedPID_update()::termName, double> > >::const_iterator' {aka 'std::_Rb_tree_const_iterator<std::pair<const Speed_pid::speedPID_update()::termName, double> >'} changed in GCC 7.1
+ 2187 |     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/mySources/move_angle.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+make: *** [src/mySources/position_pid.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+Finished building: ../src/mySources/uart.cpp
+ 
+Finished building: ../src/mySources/speed_pid.cpp
+ 
+15:02:35 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/main.cpp
+Building file: ../src/system_stm32f4xx.c
+Building file: ../StdPeriph_Driver/src/misc.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_adc.c
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_can.c
+Invoking: MCU GCC Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU GCC Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/misc.d" -MT"StdPeriph_Driver/src/misc.o" -o "StdPeriph_Driver/src/misc.o" "../StdPeriph_Driver/src/misc.c"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f4xx.d" -MT"src/system_stm32f4xx.o" -o "src/system_stm32f4xx.o" "../src/system_stm32f4xx.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_can.d" -MT"StdPeriph_Driver/src/stm32f4xx_can.o" -o "StdPeriph_Driver/src/stm32f4xx_can.o" "../StdPeriph_Driver/src/stm32f4xx_can.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_adc.d" -MT"StdPeriph_Driver/src/stm32f4xx_adc.o" -o "StdPeriph_Driver/src/stm32f4xx_adc.o" "../StdPeriph_Driver/src/stm32f4xx_adc.c"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_adc.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_adc.c:106:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_can.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_can.c:84:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/system_stm32f4xx.c:317:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/misc.h:38,
+                 from ../StdPeriph_Driver/src/misc.c:76:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+../src/system_stm32f4xx.c: In function 'SetSysClock':
+../src/system_stm32f4xx.c:760:5: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  760 |     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+      |     ^~~~~
+../src/system_stm32f4xx.c:761:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  761 |     {
+      |     ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/sequence.o' failed
+make: *** [src/mySources/sequence.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.cpp:21:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+Finished building: ../src/system_stm32f4xx.c
+Finished building: ../StdPeriph_Driver/src/misc.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_adc.c
+ 
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_can.c
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/position_pid.cpp: In member function 'void PositionPID::positionPID_update()':
+../src/mySources/position_pid.cpp:44:16: error: 'SetSpeed' is not a member of 'MotorDriver'
+   44 |   MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                ^~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::switchControl_()':
+../src/mySources/move_angle.cpp:23:78: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   23 |   if(isGotZeroPoint && !moveAngleMotor_.isPositionPID_Enable)moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+      |                                                                              ^~~~~~~~
+      |                                                                              setSpeed
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::zeroPointIntrrupt_()':
+../src/mySources/move_angle.cpp:29:18: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   29 |  moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+      |                  ^~~~~~~~
+      |                  setSpeed
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::setMotorPidSpeed_safety(int32_t)':
+../src/mySources/move_angle.cpp:62:53: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   62 |  if(!emergencySwitch.readNowState())moveAngleMotor_.SetSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                                                     ^~~~~~~~
+      |                                                     setSpeed
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+make: *** [src/mySources/position_pid.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+make: *** [src/mySources/move_angle.o] Error 1
+15:03:07 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/main.cpp
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cec.c
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_crc.c
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+Invoking: MCU GCC Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Invoking: MCU GCC Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp.o" "../StdPeriph_Driver/src/stm32f4xx_cryp.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cec.d" -MT"StdPeriph_Driver/src/stm32f4xx_cec.o" -o "StdPeriph_Driver/src/stm32f4xx_cec.o" "../StdPeriph_Driver/src/stm32f4xx_cec.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_crc.d" -MT"StdPeriph_Driver/src/stm32f4xx_crc.o" -o "StdPeriph_Driver/src/stm32f4xx_crc.o" "../StdPeriph_Driver/src/stm32f4xx_crc.c"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_aes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_cryp.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_cryp.c:164:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_crc.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_crc.c:29:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_cec.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_cec.c:93:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_cryp.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c:55:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from ../src/main.cpp:21:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/sequence.o' failed
+make: *** [src/mySources/sequence.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/main.o] Error 1
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cec.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_crc.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
+ 
+ 
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/position_pid.cpp: In member function 'void PositionPID::positionPID_update()':
+../src/mySources/position_pid.cpp:44:16: error: 'SetSpeed' is not a member of 'MotorDriver'
+   44 |   MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                ^~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::zeroPointIntrrupt_()':
+../src/mySources/move_angle.cpp:29:18: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   29 |  moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+      |                  ^~~~~~~~
+      |                  setSpeed
+../src/mySources/move_angle.cpp: In member function 'void MoveAngle::setMotorPidSpeed_safety(int32_t)':
+../src/mySources/move_angle.cpp:62:53: error: 'class PositionPID' has no member named 'SetSpeed'; did you mean 'setSpeed'?
+   62 |  if(!emergencySwitch.readNowState())moveAngleMotor_.SetSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                                                     ^~~~~~~~
+      |                                                     setSpeed
+make: *** [src/mySources/position_pid.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+make: *** [src/mySources/move_angle.o] Error 1
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+15:03:36 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/main.cpp
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dac.c
+Invoking: MCU GCC Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_des.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_des.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_des.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_des.c"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dac.d" -MT"StdPeriph_Driver/src/stm32f4xx_dac.o" -o "StdPeriph_Driver/src/stm32f4xx_dac.o" "../StdPeriph_Driver/src/stm32f4xx_dac.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" "../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_cryp.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c:48:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_cryp.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c:48:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:21:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h:37,
+                 from ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c:29:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/sequence.o' failed
+make: *** [src/mySources/sequence.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dac.h:38,
+                 from ../StdPeriph_Driver/src/stm32f4xx_dac.c:131:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+make: *** [src/mySources/move_angle.o] Error 1
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dac.c
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 1 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 1 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+ 
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   no known conversion for argument 1 from 'const uint8_t' {aka 'const unsigned char'} to 'const MotorDriver&'
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/position_pid.cpp: In member function 'void PositionPID::positionPID_update()':
+../src/mySources/position_pid.cpp:44:16: error: 'SetSpeed' is not a member of 'MotorDriver'
+   44 |   MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                ^~~~~~~~
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+make: *** [src/mySources/position_pid.o] Error 1
+15:04:58 **** Incremental Build of configuration Debug for project Launcher ****
+make -j8 all 
+Building file: ../src/mySources/move_angle.cpp
+Building file: ../src/mySources/position_pid.cpp
+Building file: ../src/mySources/sequence.cpp
+Building file: ../src/main.cpp
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/move_angle.d" -MT"src/mySources/move_angle.o" -o "src/mySources/move_angle.o" "../src/mySources/move_angle.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/position_pid.d" -MT"src/mySources/position_pid.o" -o "src/mySources/position_pid.o" "../src/mySources/position_pid.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/mySources/sequence.d" -MT"src/mySources/sequence.o" -o "src/mySources/sequence.o" "../src/mySources/sequence.cpp"
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Building file: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/auto_running.cpp
+Building file: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp
+Invoking: MCU GCC Compiler
+Building file: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp
+Invoking: MCU G++ Compiler
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+Invoking: MCU G++ Compiler
+Invoking: MCU G++ Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dcmi.d" -MT"StdPeriph_Driver/src/stm32f4xx_dcmi.o" -o "StdPeriph_Driver/src/stm32f4xx_dcmi.o" "../StdPeriph_Driver/src/stm32f4xx_dcmi.c"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/dead_reckoning.d" -MT"Libraries/src/dead_reckoning.o" -o "Libraries/src/dead_reckoning.o" "C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/motor_driver.d" -MT"Libraries/src/motor_driver.o" -o "Libraries/src/motor_driver.o" "C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp"
+C:\Users\SotaKobayashi\Google ドライブ\user\Git\2019g\2019g_Launcher\Launcher\Debug
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=c++2a -DSTM32 -DSTM32F4 -DSTM32F405RGTx -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders" -I"C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"Libraries/src/auto_running.d" -MT"Libraries/src/auto_running.o" -o "Libraries/src/auto_running.o" "C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/auto_running.cpp"
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:11,
+                 from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/StdPeriph_Driver/inc/stm32f4xx_dcmi.h:37,
+                 from ../StdPeriph_Driver/src/stm32f4xx_dcmi.c:86:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/main.cpp:18:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/auto_running.cpp:9:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/auto_running.hpp:11:10: fatal error: route.hpp: No such file or directory
+   11 | #include "route.hpp"
+      |          ^~~~~~~~~~~
+compilation terminated.
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from ../src/mySources/sequence.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+In file included from ../src/main.cpp:21:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/sequence.hpp:15:10: fatal error: can.hpp: No such file or directory
+   15 | #include <can.hpp>
+      |          ^~~~~~~~~
+compilation terminated.
+Libraries/src/subdir.mk:33: recipe for target 'Libraries/src/auto_running.o' failed
+make: *** [Libraries/src/auto_running.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:108: warning: "STM32F40_41xxx" redefined
+  108 |   #define STM32F40_41xxx
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/sequence.o' failed
+make: *** [src/mySources/sequence.o] Error 1
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
+ 
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:13,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(bool, const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 2 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 2 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   candidate expects 1 argument, 2 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/move_angle.hpp:17,
+                 from ../src/mySources/move_angle.cpp:7:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cm4.h:189,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/device/stm32f4xx.h:817,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/control_area_network.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:15,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp:1:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_PSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:428:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  428 |   register uint32_t result;
+      |                     ^~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h: In function 'uint32_t __get_MSP()':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/CMSIS/core/core_cmFunc.h:455:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  455 |   register uint32_t result;
+      |                     ^~~~~~
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp: In constructor 'PositionPID::PositionPID(PositionPID_initStructType)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:43:29: error: no matching function for call to 'MotorDriver::MotorDriver(bool, const uint8_t&)'
+   43 |   constantValues_(initStruct)
+      |                             ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, ControlAreaNetwork&)'
+   52 |  MotorDriver(const bool& emergency_state, uint8_t driver_address, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:52:2: note:   candidate expects 3 arguments, 2 provided
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:13,
+                 from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note: candidate: 'MotorDriver::MotorDriver(const bool&, uint8_t, const MotorDriver::SendParamsType&, ControlAreaNetwork&)'
+   44 |  MotorDriver(const bool& emergency_state, const uint8_t driver_address, const SendParamsType& set_driver_params, ControlAreaNetwork& can_interface) :
+      |  ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:44:2: note:   candidate expects 4 arguments, 2 provided
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note: candidate: 'constexpr MotorDriver::MotorDriver(const MotorDriver&)'
+   31 | class MotorDriver
+      |       ^~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/motor_driver.hpp:31:7: note:   candidate expects 1 argument, 2 provided
+In file included from ../src/mySources/position_pid.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/position_pid.hpp:45:16: error: 'MD_ParamSend' is not a member of 'MotorDriver'
+   45 |   MotorDriver::MD_ParamSend(initStruct.motorDriverParams);
+      |                ^~~~~~~~~~~~
+../src/mySources/position_pid.cpp: In member function 'void PositionPID::positionPID_update()':
+../src/mySources/position_pid.cpp:44:16: error: 'SetSpeed' is not a member of 'MotorDriver'
+   44 |   MotorDriver::SetSpeed((int32_t)setSpeed, MotorDriver::MotorDriveMode::PID);
+      |                ^~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:12,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp: At global scope:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:44:2: error: 'UART_Interrupt' does not name a type
+   44 |  UART_Interrupt uart_interrupt_;
+      |  ^~~~~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp: In constructor 'R1370::R1370(UART&)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:24:5: error: class 'R1370' does not have any field named 'uart_interrupt_'
+   24 |     uart_interrupt_(use_uart.useUartName(), [&](uint8_t receive_byte){ receive_data_(receive_byte);} )
+      |     ^~~~~~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:24:30: error: 'class UART' has no member named 'useUartName'; did you mean 'USART_TypeDef* const UART::useUartName_'? (not accessible from this context)
+   24 |     uart_interrupt_(use_uart.useUartName(), [&](uint8_t receive_byte){ receive_data_(receive_byte);} )
+      |                              ^~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:12,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:54:23: note: declared private here
+   54 |  USART_TypeDef* const useUartName_;
+      |                       ^~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:12,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp: In constructor 'R1370::R1370(UART&, const std::function<void()>&&)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:29:5: error: class 'R1370' does not have any field named 'uart_interrupt_'
+   29 |     uart_interrupt_(use_uart.useUartName(),
+      |     ^~~~~~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:29:30: error: 'class UART' has no member named 'useUartName'; did you mean 'USART_TypeDef* const UART::useUartName_'? (not accessible from this context)
+   29 |     uart_interrupt_(use_uart.useUartName(),
+      |                              ^~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/r1370.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:12,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/uart.hpp:54:23: note: declared private here
+   54 |  USART_TypeDef* const useUartName_;
+      |                       ^~~~~~~~~~~~
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/move_angle.o' failed
+make: *** [src/mySources/move_angle.o] Error 1
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp: At global scope:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:50:2: error: 'RotaryEncoder' is not a template
+   50 |  RotaryEncoder<encoderName::RotEnc1> rotenc_x_;
+      |  ^~~~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:51:2: error: 'RotaryEncoder' is not a template
+   51 |  RotaryEncoder<encoderName::RotEnc2> rotenc_y_;
+      |  ^~~~~~~~~~~~~
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp: In constructor 'DeadReckoning::DeadReckoning(UART&)':
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:24:67: error: use of deleted function 'RotaryEncoder::RotaryEncoder()'
+   24 |  DeadReckoning(UART& gyro_uart_port) : gyro_sensor_(gyro_uart_port){  }
+      |                                                                   ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:25:2: note: declared here
+   25 |  RotaryEncoder() = delete;
+      |  ^~~~~~~~~~~~~
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:24:67: error: use of deleted function 'RotaryEncoder::RotaryEncoder()'
+   24 |  DeadReckoning(UART& gyro_uart_port) : gyro_sensor_(gyro_uart_port){  }
+      |                                                                   ^
+In file included from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/inc/dead_reckoning.hpp:11,
+                 from C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/dead_reckoning.cpp:8:
+C:/Users/SotaKobayashi/Google ドライブ/user/Git/2019g/2019g_Launcher/Launcher/inc/myHeaders/rotary_encoder.hpp:25:2: note: declared here
+   25 |  RotaryEncoder() = delete;
+      |  ^~~~~~~~~~~~~
+src/mySources/subdir.mk:48: recipe for target 'src/mySources/position_pid.o' failed
+make: *** [src/mySources/position_pid.o] Error 1
+Libraries/src/subdir.mk:41: recipe for target 'Libraries/src/dead_reckoning.o' failed
+make: *** [Libraries/src/dead_reckoning.o] Error 1
+Finished building: C:/Users/SotaKobayashi/Google ドライブ/user/Git/Libraries/src/motor_driver.cpp
+ 

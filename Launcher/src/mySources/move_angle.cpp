@@ -20,13 +20,13 @@ void MoveAngle::switchControl_()
 	}
 	else
 	{
-		if(isGotZeroPoint && !moveAngleMotor_.isPositionPID_Enable)moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+		if(isGotZeroPoint && !moveAngleMotor_.isPositionPID_Enable)moveAngleMotor_.setSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
 	}
 }
 void MoveAngle::zeroPointIntrrupt_()
 {
 	if(isGotZeroPoint_)return;
-	moveAngleMotor_.SetSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
+	moveAngleMotor_.setSpeed(0, MotorDriver::MotorDriveMode::DutyControl);
 	moveAngleMotor_.setPositionCount((int32_t)movePositions::downPosition);
 	isGotZeroPoint_ = true;
 }
@@ -59,5 +59,5 @@ void MoveAngle::getZeroPoint_()
 void MoveAngle::setMotorPidSpeed_safety(int32_t setSpeed)
 {
 	if(zeroPoint.readNowState() && ((setSpeed > 0) == downDirectionIsTrue))setSpeed = 0;
-	if(!emergencySwitch.readNowState())moveAngleMotor_.SetSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
+	if(!emergencySwitch.readNowState())moveAngleMotor_.setSpeed(setSpeed, MotorDriver::MotorDriveMode::PID);
 }

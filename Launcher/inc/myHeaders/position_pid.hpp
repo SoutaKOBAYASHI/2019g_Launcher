@@ -39,7 +39,7 @@ public:
 	PositionPID() = delete;
 	PositionPID(const PositionPID_initStructType initStruct) :
 		RotaryEncoder(initStruct.useRotEnc),
-		MotorDriver(initStruct.useDriverAdd),
+		MotorDriver(false,initStruct.useDriverAdd),
 		constantValues_(initStruct)
 	{
 		MotorDriver::MD_ParamSend(initStruct.motorDriverParams);

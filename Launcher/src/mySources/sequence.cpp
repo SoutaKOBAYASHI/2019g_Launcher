@@ -100,7 +100,7 @@ void Sequence::sequenceUpdate_()
 			break;
 
 		case sequenceName::waitCommand:
-			if(receiveCmd_ != receiveOrderFormat::start)nowSequence_ = sequenceName::getShagai;
+			if(receiveCmd_ != receiveOrderFormat::start)nowSequence_ = sequenceName::waitOpennningArm;
 			break;
 
 		}
